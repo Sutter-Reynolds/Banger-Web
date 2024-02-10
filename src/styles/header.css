@@ -1,0 +1,56 @@
+.Hero {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    height: 120px;
+    border-bottom: 1px solid #95b1db80;
+    padding-bottom: 10px;
+    margin-bottom: 1px;
+}
+
+.Hero > * {
+    width: 260px;
+}
+
+.Submit-Button-Hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Social-Link-Container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Moto {
+    font-family: 'Grape Nuts', cursive;
+    line-height: 0px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.Submit-Button-Hero p{
+    font-size: 14px;
+    font-family: 'Cormorant', serif;
+    line-height: 12px;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.Submit-Button-Hero p, 
+.Submit-Button-Hero button{
+    transition: color .25s, border-color .25s;
+}
+
+.Submit-Button-Hero:hover p, 
+.Submit-Button-Hero:hover button{
+    color: #95b1db;
+}
+
+.Submit-Button-Hero:hover button{
+    background-color: #95b1db15;
+    border-color: #95b1db20; 
+    box-shadow: 0px 0px 1px 1px #95b1db05;
+}
