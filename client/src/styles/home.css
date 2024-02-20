@@ -1,15 +1,15 @@
 /* Main Section */
-.Featured-Trending-Flexbox{
+.Featured-Trending-Flexbox {
   display: flex;
   justify-content: center;
   background: linear-gradient(to top, #00000099, #343f3e 15%);
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(2px);
   margin-top: 1px;
 }
 
-.Featured-Trending-Container{
+.Featured-Trending-Container {
   width: 1320px;
-  padding: 40px 25px;
+  padding: 3% 2%;
   background-color: transparent;
   border-left: 1px solid #FFFFFF20;
   border-right: 1px solid #FFFFFF20;
@@ -20,105 +20,104 @@
 
 
 /* Featured Section */
-.Featured-Trending-Container2{
+.Featured-Trending-Container2 {
   display: grid;
   grid-template-columns: 3fr 1fr;
 }
 
-.Featured-Container{
+.Featured-Container {
   border-right: 1px solid #FFFFFF40;
-  padding-right: 30px;
+  padding-right: 3%;
 }
 
 .Featured-Main {
   position: relative;
   background-size: cover;
-  height: 450px;
-  margin: 20px 10px;
-  border: 1px solid #FFFFFF40;
+  width: auto;
+  height: 35vw;
+  margin: 2% 1% 1% 1%;
+  border: 0.5vw solid transparent;
+  outline: 1px solid #FFFFFF40;
   position: relative;
 }
 
-.Featured-Main h2{
+.Featured-Main h2 {
   position: absolute;
-  top: -7%;
-  left: 1%;
-  font-size: 30px;
+  top: -7.5%;
+  left: 0.5%;
+  font-size: 2vw;
   color: #FFFFFF;
   font-family: 'Grape Nuts', cursive;
 }
 
-.Featured-Main-background-Cover{
+.Featured-Main-background-Cover {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
+  background-color: #00000050;
+  backdrop-filter: invert(8%);
 }
 
-.Featured-Main-UpperInfo{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+.Featured-Main-Info-Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
-}
-
-.Featured-Main-UpperInfo h3{
-  padding: 10px 15px;
-  font-size: 25px;
   width: 100%;
-  background-color: #FFFFFF05;
-  backdrop-filter:  blur(100px) invert(15%);
+  height: 100%;
+  background-color: #00000050;
+  backdrop-filter: invert(8%);
 }
 
-.Featured-Main-Info h4{
-  z-index: 1;
-}
-
-.Featured-Main-LowerInfo{
-  position: absolute;
-  bottom: 0;
-  left: 0;
+.Featured-Main-background-Cover h3 {
+  padding: 0.25% 1%;
+  font-size: 2.2vw;
+  line-height: 2.5vw;
   width: 100%;
 }
 
-.Featured-Main-LowerInfo p{
-  padding: 5px 10px;
-  font-size: 18px;
-  line-height: 26px;
+.Featured-Main-background-Cover h4 {
+  padding-bottom: 0.5%;
+  font-size: 1vw;
   font-family: 'Cormorant', serif;
-  border-top: 1px solid #FFFFFF40;
-  background-color: #FFFFFF05;
-  backdrop-filter:  blur(250px) invert(15%);
 }
 
-.Featured-Sub-Border{
-  margin-top: 15px;
-  border: 16px solid transparent;
-  outline: 1px solid #95b1db60;
-  outline-offset: -8px;
-  background: conic-gradient(from 90deg at 1px 1px,transparent 25%,#FFFFFF20 0);
+.Featured-Main-background-Cover p {
+  padding: 0.5% 1%;
+  font-size: 1.3vw;
+  line-height: 1.6vw;
+  font-family: 'Cormorant', serif;
+  color: #FFFFFF99;
+  text-shadow: 0px 0px #FFFFFF99;
+  border-top: 1px solid #00000050;
+}
+
+.Featured-Sub-Border {
+  border: 0.75vw solid transparent;
+  outline: 1px solid #FFFFFF20;
+  outline-offset: -0.5vw;
+  background: conic-gradient(from 90deg at 1px 1px, transparent 25%, #FFFFFF30 0);
 }
 
 .Featured-Sub {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   align-items: center;
-  padding: 10px 0px;
+  padding: 1% 0%;
 }
 
-.Featured-Sub-Article{
+.Featured-Sub-Article {
   position: relative;
-  height: 220px;
-  margin: 0px 12px;
+  height: 16vw;
+  margin: 0% 7%;
   border: 1px solid #95b1db20;
   background-color: #FFFFFF05;
   box-shadow: 0px 0px 2px 1px #FFFFFF05;
   backdrop-filter: blur(4px);
 }
 
-.Featured-Sub-Article-Container{
+.Featured-Sub-Article-Container {
   height: 100%;
   width: 100%;
   display: flex;
@@ -126,25 +125,35 @@
   background-color: #95b1db30;
 }
 
-.Featured-Sub-Article-Container:hover{
+.Featured-Sub-Article-Container:hover {
   cursor: pointer;
 }
 
-.Image-Container{
+.Image-Container {
   position: relative;
-  height: 145px;
+  height: 65%;
   width: 100%;
 }
 
-.Featured-Sub-Article h3{
+.Featured-Sub-Article h3 {
+  position: absolute;
+  color: #FFFFFF50;
+  bottom: 0%;
+  width: 100%;
+  padding: 0px 6px 3px 6px;
+  font-size: 1.15vw;
+  line-height: 1.3vw;
+  font-family: 'Cormorant', serif;
+}
+
+.Featured-Sub-Article h4 {
   position: absolute;
   top: 24%;
   right: -46%;
-  font-size: 16px;
+  font-size: 1.2vw;
   width: 100%;
   color: #FFFFFF25;
-  padding: 6px;
-  line-height: 24px;
+  padding: 4%;
   overflow: hidden;
   text-align: right;
   white-space: nowrap;
@@ -152,26 +161,16 @@
   transform: rotate(-90deg);
 }
 
-.Featured-Sub-Article p{
-  position: absolute;
-  color: #FFFFFF50;
-  bottom: 0%;
-  width: 100%;
-  padding: 0px 6px 3px 6px;
-  font-size: 14px;
-  line-height: 16px;
-  font-family: 'Cormorant', serif;
-}
-
 .Feature-Aritsits-Shader1 {
   position: absolute;
-  height: 100%;
+  top: -0.5px;
+  height: calc(100% + 1px);
   width: 100%;
   background-color: #00000050;
   backdrop-filter: blur(2px) saturate(0%);
 }
 
-.Feature-Aritsits-Info-Container{
+.Feature-Aritsits-Info-Container {
   display: grid;
   position: relative;
   grid-template-columns: 1fr 1fr 3fr;
@@ -182,19 +181,19 @@
   border-width: 1px 0px;
 }
 
-.Feature-Aritsits-Info-Shader1{
+.Feature-Aritsits-Info-Shader1 {
   width: 100%;
   background-color: #00000020;
 }
 
-.Feature-Aritsits-Info-Shader2{
+.Feature-Aritsits-Info-Shader2 {
   width: 100%;
   border: 1px solid #FFFFFF05;
   border-width: 0px 1px;
   background-color: #00000020;
 }
 
-.Feature-Aritsits-Info-CircleShader{
+.Feature-Aritsits-Info-CircleShader {
   position: absolute;
   top: 0%;
   height: 50%;
@@ -204,15 +203,16 @@
   border: 1px solid #FFFFFF08;
 }
 
-.Featured-Sub-Sections{
+.Featured-Sub-Sections {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 0.5%;
+
 }
 
-.Featured-Sub-Sections-Button{
-  height: 20px;
-  width: 20px;
+.Featured-Sub-Sections-Button {
+  height: 1.3vw;
+  width: 1.3vw;
   font-size: 18px;
   margin: 0px 6px;
   background-color: #95b1db30;
@@ -222,21 +222,21 @@
   border-radius: 24px;
 }
 
-.Featured-Sub-Sections-Button:hover{
+.Featured-Sub-Sections-Button:hover {
   cursor: pointer;
 }
 
-#BrightenText{
+#BrightenText {
   color: #FFFFFF99;
 }
 
-#No-BackdropFilter{
+#No-BackdropFilter {
   backdrop-filter: none;
 }
 
-#isActiveButton{
+#isActiveButton {
   background-color: #95b1db99;
-  border-color:  #95b1db99;
+  border-color: #95b1db99;
   box-shadow: 0px 0px 2px 1px #FFFFFF10;
 }
 
@@ -248,15 +248,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 900px;
-  margin-top: 20px;
-  margin-left: 20px;
+  margin-top: 2%;
+  margin-left: 6%;
 }
 
-.Trending-Container h2{
+.Trending-Container h2 {
   position: absolute;
   top: -3.6%;
-  font-size: 22px;
+  font-size: 1.8vw;
   font-family: 'Grape Nuts', cursive;
   text-decoration: underline;
 }
@@ -264,14 +263,13 @@
 .Trending-Article {
   display: flex;
   align-items: center;
-  margin: 5px 0px;
+  margin: 2% 0%;
   width: 100%;
   height: 100%;
   background-color: #FFFFFF10;
   border: 1px solid #FFFFFF10;
-  border-radius: 2px;
-  padding: 5px;
-  background-size: 30px 30px;
+  border-radius: 1%;
+  padding: 0.25vw;
   backdrop-filter: blur(4px);
   text-decoration: none;
 }
@@ -284,49 +282,48 @@
   height: 100%;
   border: 1px solid #95b1db30;
   background-color: #95b1db30;
-  padding: 5px;
+  padding: 3% 1.5%;
 }
 
 .Image-Container2 {
   position: relative;
   right: 0%;
   background-color: #343f3e;
-  width: 80px;
-  height: 80px;
+  width: 5.8vw;
+  height: 5.8vw;
   box-shadow: 1px 1px 2px 1px #00000080;
-  margin: 5px;
+  margin: 0% 2%;
 }
 
-.Trending-Name-Title-Container{
-  margin: 5px;
+.Trending-Name-Title-Container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 32%;
-  height: 80px;
   overflow: hidden;
+  margin: 0% 2%;
 }
 
-.Trending-Name-Artist{
-  font-size: 18px;
-  line-height: 18px;
+.Trending-Name-Artist {
+  font-size: 1.3vw;
+  line-height: 1.3vw;
   color: #FFFFFF99;
   text-shadow: 0px 0px 0px #FFFFFF99;
   font-family: 'Cormorant', serif;
 }
 
-.Trending-Name-Title{
-  font-size: 16px;
-  line-height: 16px;
+.Trending-Name-Title {
+  font-size: 1.25vw;
+  line-height: 1.3vw;
   color: #FFFFFF99;
-  font-family: 'Cormorant', serif; 
+  font-family: 'Cormorant', serif;
 }
 
-.Trending-Number{
+.Trending-Number {
   position: absolute;
   right: 2.5%;
   top: 2%;
-  font-size: 16px;
+  font-size: 1.15vw;
   color: #FFFFFF99;
   text-shadow: 0px 0px #FFFFFF99;
   font-family: 'Leckerli One', cursive;
@@ -336,7 +333,7 @@
 
 
 /* Latest Section */
-.LatestSong-Albums-Vidoes{
+.LatestSong-Albums-Vidoes {
   position: relative;
   width: 100%;
 }
@@ -349,34 +346,35 @@
   height: 115%;
   object-fit: cover;
   z-index: -1;
-  -webkit-transform: translate3d(0,0,1px); 
+  -webkit-transform: translate3d(0, 0, 1px);
   -webkit-backface-visibility: hidden;
-  transform: translate3d(0,0,1px); 
+  transform: translate3d(0, 0, 1px);
   backface-visibility: hidden;
 }
 
-.LatestSong-Albums-Vidoes-Content{
+.LatestSong-Albums-Vidoes-Content {
   width: 100%;
   height: 100%;
   background-color: #00000099;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(1px);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.LatestSong-Albums-Vidoes-Content-Constraint{
+.LatestSong-Albums-Vidoes-Content-Constraint {
   width: 100%;
 }
 
-.LatestSong-Albums-Vidoes-Content-Container{
+.LatestSong-Albums-Vidoes-Content-Container {
   width: 100%;
   height: 124vw;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
 }
-.Latests-Content{
+
+.Latests-Content {
   display: grid;
   row-gap: 8%;
   position: relative;
@@ -386,7 +384,7 @@
   padding: 10%;
 }
 
-.Latest-Styling{
+.Latest-Styling {
   height: 48vw;
   width: 100%;
   background-color: #95b1db99;
@@ -394,7 +392,7 @@
   backdrop-filter: blur(3px);
 }
 
-.Latests-Content h2{
+.Latests-Content h2 {
   position: absolute;
   width: 100%;
   top: -2%;
@@ -404,14 +402,14 @@
   font-family: 'Grape Nuts', cursive;
 }
 
-.Latest-Img-Container{
+.Latest-Img-Container {
   position: relative;
   height: 14vw;
   width: 100%;
   border: .2vw solid #8f91a290;
 }
 
-.Latest-Info-Button-Sizer{
+.Latest-Info-Button-Sizer {
   height: 34vw;
   width: 100%;
   padding: .75%;
@@ -419,7 +417,7 @@
   border: .1dvw solid #8f91a290;
 }
 
-.Latest-Info-Button-Container{
+.Latest-Info-Button-Container {
   height: 100%;
   width: 100%;
   padding: 1vw;
@@ -427,31 +425,31 @@
   border: .05vw solid #8f91a290;
 }
 
-.Latest-Info{
+.Latest-Info {
   width: 100%;
   height: 90%;
 }
 
 .Latest-Info h3,
-.Latest-Date{
+.Latest-Date {
   display: inline-block;
   margin-bottom: 8%;
 }
 
-.Latest-Info h3{
+.Latest-Info h3 {
   font-size: 1.8vw;
   line-height: 2vw;
   color: #FFFFFF;
 }
 
-.Latest-Date{
+.Latest-Date {
   color: #8f91a2;
   text-shadow: 0px 0px #8f91a2;
   font-size: 1vw;
   padding: 0% 1%;
 }
 
-.Latest-Summary{
+.Latest-Summary {
   color: #8f91a2;
   text-shadow: 0px 0px #8f91a2;
   font-size: 1.1vw;
@@ -463,12 +461,12 @@
   text-overflow: ellipsis;
 }
 
-.Latest-Button-Container{
+.Latest-Button-Container {
   display: flex;
   justify-content: right;
 }
 
-.Latest-Button{
+.Latest-Button {
   height: 100%;
   padding: .4vw .6vw;
   background: transparent;
@@ -479,20 +477,20 @@
   border-radius: 2.5%;
 }
 
-.Latest-Button:hover{
+.Latest-Button:hover {
   color: #FFFFFF;
   border-color: #FFFFFF;
   transition: color 0.1s, background-color 0.1s, box-shadow 0.1s, border-color 0.1s;
 }
 
-.Latests-Content-Link-Container{
+.Latests-Content-Link-Container {
   position: absolute;
   width: 100%;
   text-align: center;
   bottom: -1.8%;
 }
 
-.Latests-Content a{
+.Latests-Content a {
   font-size: 1.5vw;
   line-height: 5vw;
   font-family: 'Grape Nuts', cursive;
@@ -503,7 +501,7 @@
 
 
 /* Upcoming Section */
-.Upcoming-Artists{
+.Upcoming-Artists {
   position: relative;
   border: 0vw solid #FFFFFF40;
   border-width: 1px 0vw;
@@ -512,7 +510,7 @@
   margin-bottom: 1px;
 }
 
-.Upcoming-Artists h2{
+.Upcoming-Artists h2 {
   text-align: center;
   font-size: 3vw;
   padding: 3vw 0vw 1.2vw 0vw;
@@ -520,27 +518,27 @@
   font-family: 'Grape Nuts', cursive;
 }
 
-.Upcoming-Artists-Container{
+.Upcoming-Artists-Container {
   display: grid;
   justify-items: center;
   grid-auto-flow: column;
   padding: 2% 1%;
   margin-bottom: 1%;
   gap: 1.5%;
-  overflow-x:hidden;
+  overflow-x: hidden;
   background: #95b1db20;
   border: 0px solid #FFFFFF30;
   border-width: 1px 0px;
   box-shadow: 0 1px 2px #00000050;
 }
 
-.Upcoming-Image-Container{
+.Upcoming-Image-Container {
   width: 30vw;
   height: 35vw;
   border: 1px solid #FFFFFF40;
 }
 
-.Upcoming-Artists-Content-Description-Container{
+.Upcoming-Artists-Content-Description-Container {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -548,12 +546,12 @@
 }
 
 
-.Upcoming-Artists-Name{
+.Upcoming-Artists-Name {
   font-size: 1.6vw;
   color: #FFFFFF;
 }
 
-.Upcoming-Artists-Genre{
+.Upcoming-Artists-Genre {
   font-size: 1.4vw;
   line-height: 0vw;
   margin-top: 5%;
@@ -561,16 +559,16 @@
   font-family: 'Cormorant', serif;
 }
 
-.Upcoming-Artists-Scrolling{
+.Upcoming-Artists-Scrolling {
   position: absolute;
   width: 100%;
-  bottom:36%;
+  bottom: 36%;
   display: flex;
   justify-content: space-between;
   padding: 0vw 2vw;
 }
 
-.Scroll-Arrow-Button{
+.Scroll-Arrow-Button {
   border: .1vw solid #00000040;
   border-radius: 50%;
   background: #00000060;
@@ -579,22 +577,22 @@
   z-index: 1;
 }
 
-.Scroll-Arrow-Button:hover{
+.Scroll-Arrow-Button:hover {
   cursor: pointer;
 }
 
-.Scroll-Arrow{
+.Scroll-Arrow {
   font-size: 9.5vw;
   line-height: 0;
   color: #00000060;
   transition: color .20s;
 }
 
-.Scroll-Arrow:hover{
+.Scroll-Arrow:hover {
   color: #95b1db99;
 }
 
-.Gradient-Color{
+.Gradient-Color {
   position: absolute;
   height: calc(100% + (2*0.1vw));
   width: 100%;
@@ -603,7 +601,7 @@
   background: linear-gradient(to left, #95b1db50, transparent, transparent, transparent, #95b1db50), linear-gradient(to left, #00000050, #00000005, #00000005, #00000050), linear-gradient(to left, #00000075, transparent, transparent, #00000075);
 }
 
-.Submit-PopUp{
+.Submit-PopUp {
   position: relative;
   display: grid;
   grid-template-columns: 20vw 35vw 20vw;
@@ -616,40 +614,40 @@
   margin-bottom: 1px;
 }
 
-.Submit-PopUp h1{
+.Submit-PopUp h1 {
   font-size: 1.2vw;
   font-family: 'Cormorant', serif;
-  text-shadow: 2px 7px 5px #00000005, 
-  0px -4px 10px #FFFFFF05;
+  text-shadow: 2px 7px 5px #00000005,
+    0px -4px 10px #FFFFFF05;
 }
 
-.Submit-PopUp h4{
+.Submit-PopUp h4 {
   font-size: 1vw;
   font-family: 'Cormorant', serif;
   text-decoration: underline;
-  text-shadow: 2px 7px 5px #00000005, 
-  0px -4px 10px #FFFFFF05;
+  text-shadow: 2px 7px 5px #00000005,
+    0px -4px 10px #FFFFFF05;
 }
 
-.Submit-PopUp li{
+.Submit-PopUp li {
   font-size: 1vw;
   font-family: 'Cormorant', serif;
   color: #95b1db;
-  text-shadow: 2px 7px 5px #00000005, 
-  0px -4px 10px #FFFFFF05;
+  text-shadow: 2px 7px 5px #00000005,
+    0px -4px 10px #FFFFFF05;
 }
 
-.Submit-PopUp p{
+.Submit-PopUp p {
   color: #95b1db;
 }
 
-.PopUp-Submit-Button{
+.PopUp-Submit-Button {
   padding: 0.5vw 1.5vw;
   border-radius: 2vw;
   font-size: 1.2vw;
 }
 
-.Submit-PopUp-Cancel{
+.Submit-PopUp-Cancel {
   position: absolute;
   top: 0;
   right: 0;
@@ -659,157 +657,305 @@
   font-size: .5vw;
 }
 
-.Submit-PopUp-Cancel:hover{
+.Submit-PopUp-Cancel:hover {
   cursor: pointer;
 }
 
-.fa-xmark{
+.fa-xmark {
   transition: color .25s;
 }
 
-.fa-xmark:hover{
+.fa-xmark:hover {
   color: #95b1db99;
 }
 
-
-
 /* Media Querry */
-@media (width >= 1550px) {
+
+/* Styles for phones */
+@media only screen and (max-width: 767px) {}
+
+/* Styles for tablets */
+@media screen and (max-width: 1024px) {
+
+  .Featured-Main {
+    height: 45vw;
+  }
+
+  .Featured-Main h2 {
+    top: -5.75%;
+  }
+
+  .Featured-Trending-Container2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Featured-Sub-Border {
+    display: none;
+  }
+
+  .Featured-Container {
+    border: none;
+    margin: 0% 4%;
+    padding: 0%;
+  }
+
+  .Featured-Sub-Sections-Button {
+    margin-top: 0.5%;
+    height: 1.5vw;
+    width: 1.5vw;
+  }
+
+  .Trending-Container {
+    display: flex;
+    flex-direction: row;
+    margin: 0%;
+    margin: 2% 1% 3% 1%;
+  }
+
+  .Trending-Article {
+    
+  }
+
+  .Featured-Main-Info-Container h3 {
+    font-size: 2.6vw;
+    line-height: 2.6vw;
+  }
+
+  .Featured-Main-Info-Container h4 {
+    font-size: 1.4vw;
+  }
+
+  .Featured-Main-Info-Container p {
+    font-size: 1.8vw;
+    line-height: 2vw;
+  }
+
+
+}
+
+@media screen and (max-width: 1320px) {
+  .Featured-Trending-Container {
+    border: none;
+  }
+}
+
+@media screen and (min-width: 1320px) {
+
+  /* Featured Section*/
+  .Featured-Trending-Container {
+    padding: 39px 26px;
+  }
+
+  .Featured-Main {
+    height: 460px;
+    border-width: 6px;
+  }
+
+  .Featured-Main h2 {
+    font-size: 26.4px;
+  }
+
+  .Featured-Main-Info-Container h3 {
+    font-size: 29.04px;
+    line-height: 33px;
+  }
+
+  .Featured-Main-Info-Container h4 {
+    font-size: 13.2px;
+  }
+
+  .Featured-Main-Info-Container p {
+    font-size: 17.16px;
+    line-height: 21.12px;
+  }
+
+  .Featured-Sub-Border {
+    border-width: 9px;
+  }
+
+  .Featured-Sub-Article {
+    height: 210px;
+    width: 155px;
+  }
+
+  .Featured-Sub-Article h3 {
+    font-size: 15.18px;
+    line-height: 17.16px;
+  }
+
+  .Featured-Sub-Article h4 {
+    font-size: 15.84px;
+  }
+
+  .Featured-Sub-Sections-Button {
+    height: 15px;
+    width: 15px;
+  }
+
+  /* Trending Section */
+  .Trending-Container h2 {
+    font-size: 23.76px;
+  }
+
+  .Image-Container2 {
+    height: 76px;
+    width: 76px;
+  }
+
+  .Trending-Name-Artist {
+    font-size: 17.16px;
+    line-height: 17.16px;
+  }
+
+  .Trending-Name-Title {
+    font-size: 16.5px;
+    line-height: 17.16px;
+  }
+
+  .Trending-Number {
+    font-size: 15.18px;
+  }
+
+}
+
+/* Styles for Computer */
+@media screen and (min-width: 1500px) {
 
   /* Latests Section */
   .LatestSong-Albums-Vidoes-Content-Container {
-      grid-template-columns: 500px 500px 500px;
-      height: 1860px;
-      justify-content: center;
-      gap: 2.5vw;
+    grid-template-columns: 500px 500px 500px;
+    height: 1860px;
+    justify-content: center;
+    gap: 2.5vw;
   }
 
-  .Latest-Styling{
-      border-width: 1px;
-      height: 720px;
-  }
-  
-  .Latests-Content h2{
-      font-size: 33px;
-      line-height: 75px;
-  }
-  
-  .Latest-Img-Container{
-      border-width: 3px;
-      height: 210px;
-  }
-  
-  .Latest-Info-Button-Sizer{
-      border-width: 1px;
-      height: 510px;
-  }
-  
-  .Latest-Info-Button-Container{
-      padding: 15px;
-      border-width: 1px;
-  }
-  
-  .Latest-Info h3{
-      font-size: 27px;
-      line-height: 30px;
-  }
-  
-  .Latest-Date{
-      font-size: 15px;
-  }
-  
-  .Latest-Summary{
-      font-size: 16.5px;
-      line-height: 24px;
-  }
-  
-  .Latest-Button{
-      padding: 6px 9px;
-      border-width: 1px;
-      font-size: 15px;
+  .Latest-Styling {
+    border-width: 1px;
+    height: 720px;
   }
 
-  .Latests-Content a{
-      font-size: 22.5px;
-      line-height: 75px;
+  .Latests-Content h2 {
+    font-size: 33px;
+    line-height: 75px;
+  }
+
+  .Latest-Img-Container {
+    border-width: 3px;
+    height: 210px;
+  }
+
+  .Latest-Info-Button-Sizer {
+    border-width: 1px;
+    height: 510px;
+  }
+
+  .Latest-Info-Button-Container {
+    padding: 15px;
+    border-width: 1px;
+  }
+
+  .Latest-Info h3 {
+    font-size: 27px;
+    line-height: 30px;
+  }
+
+  .Latest-Date {
+    font-size: 15px;
+  }
+
+  .Latest-Summary {
+    font-size: 16.5px;
+    line-height: 24px;
+  }
+
+  .Latest-Button {
+    padding: 6px 9px;
+    border-width: 1px;
+    font-size: 15px;
+  }
+
+  .Latests-Content a {
+    font-size: 22.5px;
+    line-height: 75px;
   }
 
 
 
 
   /* Upcoming Section*/
-  .Upcoming-Artists{
-      border-width: 1px 0px;
+  .Upcoming-Artists {
+    border-width: 1px 0px;
   }
 
-  .Upcoming-Artists h2{
-      font-size: 45px;
-      padding: 45px 0px 18px 0px;
+  .Upcoming-Artists h2 {
+    font-size: 45px;
+    padding: 45px 0px 18px 0px;
   }
 
-  .Upcoming-Artists-Container{
-      grid-template-columns: auto auto auto auto;
-      padding: 30px 15px;
-      margin-bottom: 15px;
-      gap: 1%;
+  .Upcoming-Artists-Container {
+    grid-template-columns: auto auto auto auto;
+    padding: 30px 15px;
+    margin-bottom: 15px;
+    gap: 1%;
   }
 
-  .Upcoming-Image-Container{
-      height: 525px;
-      width: 450px;
+  .Upcoming-Image-Container {
+    height: 525px;
+    width: 450px;
   }
 
-  .Upcoming-Artists-Content-Description-Container{
-      margin-top: 9px;
+  .Upcoming-Artists-Content-Description-Container {
+    margin-top: 9px;
   }
 
-  .Upcoming-Artists-Name{
-      font-size: 24px;
-  }
-  
-  .Upcoming-Artists-Genre{
-      font-size: 21px;
-      margin-top: 7.875px;
+  .Upcoming-Artists-Name {
+    font-size: 24px;
   }
 
-  .Upcoming-Artists-Scrolling{
-      bottom: 324.141px;
-      padding: 0vw 36px;
+  .Upcoming-Artists-Genre {
+    font-size: 21px;
+    margin-top: 7.875px;
   }
 
-  .Scroll-Arrow-Button{
-      border-radius: 360px;
-      padding: 85px 54px 117px 54px;
+  .Upcoming-Artists-Scrolling {
+    bottom: 324.141px;
+    padding: 0vw 36px;
   }
 
-  .Scroll-Arrow{
-      font-size: 171px;
+  .Scroll-Arrow-Button {
+    border-radius: 360px;
+    padding: 85px 54px 117px 54px;
   }
 
-  .Gradient-Color{
-      height:  862.219px
+  .Scroll-Arrow {
+    font-size: 171px;
   }
 
-  .Submit-PopUp{
-      height: 149px;
+  .Gradient-Color {
+    height: 862.219px
   }
 
-  .Submit-PopUp h1{
-      font-size: 21.6px;
+  .Submit-PopUp {
+    height: 149px;
   }
-  
+
+  .Submit-PopUp h1 {
+    font-size: 21.6px;
+  }
+
   .Submit-PopUp li,
-  .Submit-PopUp h4{
-      font-size: 18px;
+  .Submit-PopUp h4 {
+    font-size: 18px;
   }
-  
-  .PopUp-Submit-Button{
-      padding:9px 27px;
-      font-size: 21.6px;
+
+  .PopUp-Submit-Button {
+    padding: 9px 27px;
+    font-size: 21.6px;
   }
-  
-  .Submit-PopUp-Cancel{
-      font-size: 9px;
+
+  .Submit-PopUp-Cancel {
+    font-size: 9px;
   }
-  
+
 }

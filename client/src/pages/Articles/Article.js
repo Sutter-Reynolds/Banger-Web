@@ -9,30 +9,26 @@ import "../../styles/utils/shade.css"
 
 const Article = ({ type }) => {
   const params = useParams();
-  const { customTitle, timeStamp, review, imgLink, videoLink, spotifyLink, color1, color2, color3, creditName, creditTwitter, creditIG } = useDataValues(useTableData3(getArticle, type, params['*'])[0]);
+  const { customTitle, timeStamp, review, imgLink, videoLink, spotifyLink, color1, creditName, creditTwitter, creditIG } = useDataValues(useTableData3(getArticle, type, params['*'])[0]);
 
-
-
-
-  const background = `linear-gradient(-45deg, ${color1}20, ${color2}20, ${color3}20)`;
   return (
     <div className="Singles-FlexBox">
-      <div className="Singles-Constraint" style={{ background: background }}>
+      <div className="Singles-Constraint" style={{ background:  `${color1}20`}}>
 
-        <time className="Singles-Date">{timeStamp}</time>
+        <time className="Singles-Date" >{timeStamp}</time>
         <h3 className="Singles-Custom-Title">{customTitle}</h3>
 
         <figure>
+          <div className="Display-Container">
           {type === "singles" || type === "albums" ? (
-            <div className="Display-Container">
-              <img src={imgLink} alt="" className="img-fitter2" />
+            <>
+              <img src={imgLink} alt="" className="img-fitter2"/>
               <div className='Shader4'></div>
-            </div>
+            </>
           ) : type === "videos" ? (
-            <div className="Display-Container">
               <iframe title="Video-Link" src={videoLink} className="Iframe" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-            </div>
           ) : null}
+          </div>
         </figure>
         <div className="Singles-Credits-Container">
           <p className="Singles-Credit">{`By: ${creditName}`}</p>

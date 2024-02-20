@@ -2,9 +2,8 @@ import useDataValues from "../../../hooks/useDataValues"
 import { Link } from 'react-router-dom';
 import "../../../styles/utils/shade.css"
 
-const ContentArticle = ({data}) => {
+const ContentArticle = ({data, type}) => {
     const { timeStamp, customTitle, review, imgLink, articleLink} = useDataValues(data);
-    const type = "singles"
   return (
     <article className="Latest-Styling">
         <figure className="Latest-Img-Container">

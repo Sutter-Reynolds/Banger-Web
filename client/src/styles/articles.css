@@ -1,61 +1,64 @@
-.Singles-FlexBox{
+.Singles-FlexBox {
     display: flex;
     justify-content: center;
     width: 100%;
 }
 
-.Singles-Constraint{
+.Singles-Constraint {
     width: 100%;
     display: flex;
     flex-direction: column;
     border: solid 0px #FFFFFF20;
     border-width: 0px 1px;
-    padding: 5vw 10vw;
+    padding: 2.5vw 10vw;
 }
 
-.Singles-Artist-Info h4{
+.Singles-Artist-Info h4 {
     z-index: 1;
 }
 
-figure{
+figure {
     display: flex;
     justify-content: center;
 }
 
-.Display-Container{
+.Display-Container {
     position: relative;
-    height: 42vw;
-    width: 100%;
-    margin-bottom: 4%;
-    border: 1px solid #FFFFFF40;
+    height: 38vw;
+    width: 95%;
+    margin-bottom: 2%;
+    border: 1px solid #FFFFFF20;
 }
 
-.Singles-Date{
+.Singles-Date {
     font-family: 'Cormorant', serif;
     display: inline-block;
     font-size: 1vw;
-    margin-bottom: 2%;
+    margin-bottom: 1.5%;
     align-self: flex-end;
 }
 
-.Singles-Custom-Title{
+.Singles-Custom-Title {
     font-size: 2.5vw;
-    margin-bottom: 0.25%;
+    margin-bottom: 1%;
     text-align: center;
 }
 
-.Singles-Credits-Container{
+.Singles-Credits-Container {
+    font-family: 'Cormorant', serif;
     display: flex;
     gap: 0.5vw;
-    margin-bottom: 0.75%;
-    font-family: 'Cormorant', serif;
+    margin-bottom: 1%;
     font-size: 1vw;
     justify-content: center;
 }
 
-.Singles-Summary{
-    font-size: 1.25vw;
+.Singles-Summary {
+    font-size: 1.15vw;
+    line-height: 1.7vw;
     margin-bottom: 5%;
+    color: #FFFFFF99;
+    text-shadow: 0px 0px #FFFFFF99;
 }
 
 .Iframe {
@@ -63,33 +66,34 @@ figure{
     width: 50%;
 }
 
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1550px) {
 
     /* Info Section */
-    .Singles-Constraint{
+    .Singles-Constraint {
         width: 1500px;
-        padding: 90px 150px;
+        padding: 37.5px 150px;
     }
-    
-    .Display-Container{
-        height: 628px;
+
+    .Display-Container {
+        height: 568px;
     }
-    
-    .Singles-Date{
+
+    .Singles-Date {
         font-size: 15px;
     }
-    
-    .Singles-Custom-Title{
+
+    .Singles-Custom-Title {
         font-size: 37.5px;
     }
-    
-    .Singles-Credits-Container{
+
+    .Singles-Credits-Container {
         gap: 7.5px;
-        font-size:  15px;
+        font-size: 15px;
     }
-    
-    .Singles-Summary{
-        font-size: 18.75px;
+
+    .Singles-Summary {
+        font-size: 17.25px;
+        line-height: 25.5px;
     }
 
 }

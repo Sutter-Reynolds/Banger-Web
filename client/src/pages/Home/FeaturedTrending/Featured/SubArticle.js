@@ -17,8 +17,8 @@ const SubArticle = ({ data, isActive, handleClick, num }) => {
           </div>
         </figure>
       </div>
-      <h3 id={ isActive? "BrightenText" : ""}>{`${data.artist}`}</h3>
-      <p id={ isActive? "BrightenText" : ""}>{data.customTitle}</p>
+      <h4 id={ isActive? "BrightenText" : ""}>{`${data.artist}`}</h4>
+      <h3 id={ isActive? "BrightenText" : ""}>{data.customTitle}</h3>
     </article>
   );
 };
