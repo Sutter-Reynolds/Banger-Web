@@ -12,11 +12,12 @@ const Article = ({ type }) => {
   const { customTitle, timeStamp, review, imgLink, videoLink, spotifyLink, color1, creditName, creditTwitter, creditIG } = useDataValues(useTableData3(getArticle, type, params['*'])[0]);
 
   return (
-    <div className="Singles-FlexBox">
-      <div className="Singles-Constraint" style={{ background:  `${color1}20`}}>
+    <div className="Articles-FlexBox">
+      <div className="Articles-Background-Cover">
+        <div className="Articles-Constraint" style={{ background:  `${color1}50`}}>
 
-        <time className="Singles-Date" >{timeStamp}</time>
-        <h3 className="Singles-Custom-Title">{customTitle}</h3>
+        <time className="Articles-Date" >{timeStamp}</time>
+        <h3 className="Articles-Custom-Title">{customTitle}</h3>
 
         <figure>
           <div className="Display-Container">
@@ -30,15 +31,16 @@ const Article = ({ type }) => {
           ) : null}
           </div>
         </figure>
-        <div className="Singles-Credits-Container">
-          <p className="Singles-Credit">{`By: ${creditName}`}</p>
-          <p className="Singles-Credit">{`Twitter: ${creditTwitter}`}</p>
-          <p className="Singles-Credit">{`Insta: ${creditIG}`}</p>
+        <div className="Articles-Credits-Container">
+          <p className="Articles-Credit">{`By: ${creditName}`}</p>
+          <p className="Articles-Credit">{`Twitter: ${creditTwitter}`}</p>
+          <p className="Articles-Credit">{`Insta: ${creditIG}`}</p>
         </div>
-
-        <p className="Singles-Summary">{review}</p>
-        <p className="Singles-Summary">{review}</p>
-        <p className="Singles-Summary">{review}</p>
+        
+        <h5 className="Articles-Header">Review:</h5>
+        <p className="Articles-Summary">{review}</p>
+        <p className="Articles-Summary">{review}</p>
+        <p className="Articles-Summary">{review}</p>
 
         {type !== "Videos" ? (
           <iframe title="Music-Link" src={spotifyLink} className="Iframe" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
@@ -48,6 +50,7 @@ const Article = ({ type }) => {
           <p />
         ) : null}
 
+        </div>
       </div>
     </div>
   )

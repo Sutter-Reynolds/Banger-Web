@@ -1,6 +1,9 @@
 
 
 const Info = ({data}) => {
+
+  
+
   return (
     <article className="Featured-Singles-Albums-Videos-Currnet">
         <div className="Featured-Singles-Albums-Videos-Currnet-Title">

@@ -1,6 +1,8 @@
-import { useState } from "react";
+import useWindowSize from "../../../../hooks/useWindowSize";
+import { useState, useEffect } from "react";
 
 const Button = ({ setCurrentArticles, setCurrentArticle }) => {
+  const windowWidth = useWindowSize();
   const [isActive, setIsAcitve] = useState(0);
   const handleClick = (num) => {
     setCurrentArticles(num);
@@ -8,12 +10,35 @@ const Button = ({ setCurrentArticles, setCurrentArticle }) => {
     setIsAcitve(num);
   };
 
+  const handleClick2 = (num) => {
+    setCurrentArticles(0);
+    setCurrentArticle(num);
+    setIsAcitve(num);
+  };
+
+  useEffect(() => {
+    if (windowWidth === 1024) {
+      setIsAcitve(0); 
+      setCurrentArticle(0);
+    }
+  }, [windowWidth]);
+
   return (
     <div className="Featured-Sub-Sections">
-      <button className="Featured-Sub-Sections-Button" id={isActive === 0 ? "isActiveButton" : ""} onClick={() => handleClick(0)}></button>
-      <button className="Featured-Sub-Sections-Button"  id={isActive === 1 ? "isActiveButton" : ""} onClick={() => handleClick(1)}></button>
-      <button className="Featured-Sub-Sections-Button"  id={isActive === 2 ? "isActiveButton" : ""} onClick={() => handleClick(2)}></button>
-    </div>
+    { windowWidth > 1024 ? (
+      <>
+        {[0, 1, 2].map(index => (
+            <button key={index}className="Featured-Sub-Sections-Button" id={isActive === index ? "isActiveButton" : ""} onClick={() => handleClick(index)}/>
+        ))}
+      </>
+    ):(
+      <>
+        {[0, 1, 2, 3, 4].map(index => (
+            <button key={index}className="Featured-Sub-Sections-Button" id={isActive === index ? "isActiveButton" : ""} onClick={() => handleClick2(index)}/>
+        ))}
+      </>
+    )}
+</div>
   );
 };
 

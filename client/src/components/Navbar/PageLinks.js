@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
+import scrollToTop from '../../utils/scrollToTop';
 
 const PageLinks = ({link, name}) => {
   return (
-    <li><Link to ={link} replace={true} className="Page-Link">{name}</Link></li>
+    <li><Link onClick={scrollToTop} to ={link} replace={true} className="Page-Link">{name}</Link></li>
   )
 }
 

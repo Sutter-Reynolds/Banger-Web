@@ -7,7 +7,7 @@ const Main = ({ dataArray, currentArticle, currentArticles }) => {
   console.log(color1);
 
   return (
-    <section className="Featured-Main" style={{borderColor: `${color1}40`, outline: `1px solid ${color1}60`}}>
+    <section className="Featured-Main" style={{borderColor: `${color1}25`, outline: `1px solid ${color1}50`}}>
       <h2>Featured</h2>
       <img className="img-fitter" src={imgLink} alt="" />
       <div className="Shader3" />

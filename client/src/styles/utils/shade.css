@@ -51,3 +51,16 @@
     align-items: center;
     justify-content: center;
  }
+
+ #BrightenText {
+   color: #FFFFFF99;
+ }
+
+
+ #BrightenText2 {
+   color: #EAEAEA;
+ }
+
+ #BrightenBorder{
+   border-color: #FFFFFF30;
+ }
