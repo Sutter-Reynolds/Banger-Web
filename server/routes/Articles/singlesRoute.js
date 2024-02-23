@@ -6,8 +6,10 @@ const singelescontroller = new SinglesController()
 class SinglesRoute extends ArticlesRoute {
     constructor() {
         super(singelescontroller);
+        this.SinglesRoutes();
     }
 
+    
     SinglesRoutes(){
         this.router
         .route("/")

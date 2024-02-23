@@ -6,6 +6,7 @@ const songsController = new SongsController()
 class SongsRoute extends ArticlesRoute {
     constructor() {
         super(songsController);
+        this.SongsRoutes();
     }
 
     SongsRoutes(){

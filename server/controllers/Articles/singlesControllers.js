@@ -9,7 +9,6 @@ class SinglesController extends ArticlesController {
     createNewSingle = async (req, res, next) => {
         try {
             const { artist, title, customTitle, review, videoLink, spotifyLink, creditName, creditTwitter, creditIG } = req.body;
-
             const single = new Singles(artist, title, customTitle, review, videoLink, spotifyLink, creditName, creditTwitter, creditIG);
 
             await single.save();

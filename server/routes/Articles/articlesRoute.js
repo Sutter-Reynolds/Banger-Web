@@ -38,7 +38,7 @@ class ArticlesRoute {
 
         this.router
             .route("/article/:artistTitle")
-            .get(this.article.getArticle)
+            .get(this.article.getArticle) 
 
     }
 }

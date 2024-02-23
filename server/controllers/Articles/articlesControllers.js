@@ -1,4 +1,3 @@
-import Articles from "../../models/Articles/articles.js";
 const latestNum = 16;
 
 class ArticlesController {

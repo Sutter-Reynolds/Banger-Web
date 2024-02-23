@@ -6,6 +6,7 @@ const albumsController = new AlbumsController()
 class AlbumsRoute extends ArticlesRoute {
     constructor() {
         super(albumsController);
+        this.AlbumsRoutes();
     }
 
     AlbumsRoutes(){

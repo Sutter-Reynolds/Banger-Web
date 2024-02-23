@@ -6,6 +6,7 @@ const videosController = new VideosController()
 class VideosRoute extends ArticlesRoute {
     constructor() {
         super(videosController);
+        this.VideosRoutes();
     }
 
     VideosRoutes(){
