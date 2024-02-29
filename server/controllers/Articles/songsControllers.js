@@ -4,6 +4,7 @@ import Songs from '../../models/Articles/songs.js';
 class SongsController extends ArticlesController {
     constructor() {
         super(Songs, "songs");
+        
     }
 
     createNewSong = async (req, res, next) => {
@@ -18,6 +19,17 @@ class SongsController extends ArticlesController {
             res.status(201).json({ message: "Post Created" });
 
         } catch (err) {
+            console.log(err);
+            next(err);
+        }
+    }
+
+    getSongByAlbumId = async (req, res, next) => {
+        try{
+            const albumId = parseInt(req.params.id);
+            const [songs, _ ] = await Songs.getSongByAlbumId(this.tableName, albumId);
+            res.status(200).json({songs})
+        } catch (err){
             console.log(err);
             next(err);
         }

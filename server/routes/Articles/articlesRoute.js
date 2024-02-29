@@ -8,37 +8,40 @@ class ArticlesRoute {
     }
 
     setupRoutes(){
-        this.router
-            .route("/")
-            .get(this.article.getAllArticles)
 
-        this.router
-            .route("/home-latest")
-            .get(this.article.getHomeLatest)
-
-        this.router
-            .route("/home-trending")
-            .get(this.article.getHomeTrending)
-
-        this.router
-            .route("/latest-articles")
-            .get(this.article.getTableLatest)
-
-        this.router
-            .route("/latest-articles/:offSet")
-            .get(this.article.getLatestArticles)
+        this.router 
+            .route("/search")
+            .get(this.article.getSearch)
 
         this.router
             .route("/home-featured")
             .get(this.article.getHomeFeatured)
 
         this.router
-            .route("/featured")
+            .route("/home-trending")
+            .get(this.article.getHomeTrending)
+
+        this.router
+            .route("/home-latest")
+            .get(this.article.getHomeLatest)
+
+        this.router
+            .route("/featured-articles")
             .get(this.article.getFeaturedByTable)
+
+        this.router
+            .route("/latest-articles")
+            .get(this.article.getTableLatest)
+
+        this.router
+            .route("/recent-articles")
+            .get(this.article.getRecentArticles)
 
         this.router
             .route("/article/:artistTitle")
             .get(this.article.getArticle) 
+        
+        
 
     }
 }

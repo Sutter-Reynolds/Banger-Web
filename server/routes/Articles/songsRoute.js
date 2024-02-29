@@ -13,6 +13,10 @@ class SongsRoute extends ArticlesRoute {
         this.router
         .route("/")
         .post(songsController.createNewSong)
+
+        this.router
+        .route("/albums-songs/:id")
+        .get(songsController.getSongByAlbumId)
     }
 }
 

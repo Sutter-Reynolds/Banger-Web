@@ -2,21 +2,29 @@
 import Featured from "./Featured/Featured"
 import Latest from "./Latest/Latest"
 import Articles from "./Articles/Articles"
-import useTableData2 from "../../hooks/useTableData2"
-import useTableData3 from "../../hooks/useTableData3"
-import { getLatestTable, getLatestWithOffeset ,getTableFeatured } from "../../utils/getData"
+import useTableData from "../../hooks/useTableData"
+import { useState, useEffect } from "react"
+import { getLatestTable, getRecentWithPage, getTableFeatured, } from "../../utils/getData"
 
 //Style Sheets
 import "../../styles/singles-albums-videos.css"
 import "../../styles/utils/shade.css"
 
 
-const SinglesAlbumsVideos = ({table}) => {
+const SinglesAlbumsVideos = ({ table }) => {
+  const [load, setLoad] = useState(0);
+  const [viewArticles, setViewArticles] = useState([]);
+  useEffect(() => {
+    setLoad(0);
+    setViewArticles([]);
+  }, [table])
+
+
   return (
     <>
-      <Featured dataArray={useTableData2(getTableFeatured, table)} type={table}/>
-      <Latest dataArray={useTableData2(getLatestTable, table)} type={table}/>
-      <Articles dataArray={useTableData3(getLatestWithOffeset, table, 0)} type={table}/>
+      <Featured dataArray={useTableData(getTableFeatured, table, null)} type={table} />
+      <Latest dataArray={useTableData(getLatestTable, table, null)} type={table} />
+      <Articles dataArray={useTableData(getRecentWithPage, table, load)} viewArticles={viewArticles} type={table} setLoad={setLoad} load={load} />
     </>
   )
 }

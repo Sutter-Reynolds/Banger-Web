@@ -9,22 +9,24 @@ const useMouseArea = (areaRef) => {
       const mouseX = event.clientX;
       const mouseY = event.clientY;
 
-      const boundaryPercentageX = 8;
-      const boundaryPercentageY = 4;
+      const boundaryPercentageX = 2;
+      const boundaryPercentageY = 2;
       const boundaryX = (innerWidth * boundaryPercentageX) / 100;
       const boundaryY = (innerHeight * boundaryPercentageY ) / 100;
 
-      const rect = areaRef.current.getBoundingClientRect();
+      const rect = areaRef.current?.getBoundingClientRect();
 
-      if (
-        mouseX >= rect.left - boundaryX &&
-        mouseX <= rect.right + boundaryX &&
-        mouseY >= rect.top - boundaryY &&
-        mouseY <= rect.bottom + boundaryY
-      ) {
-        setIsMouseInArea(true);
-      } else {
-        setIsMouseInArea(false);
+      if(rect){
+        if (
+          mouseX >= rect.left - boundaryX &&
+          mouseX <= rect.right + boundaryX &&
+          mouseY >= rect.top - boundaryY &&
+          mouseY <= rect.bottom + boundaryY
+        ) {
+          setIsMouseInArea(true);
+        } else {
+          setIsMouseInArea(false);
+        }
       }
     };
 

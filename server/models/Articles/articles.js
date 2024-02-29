@@ -12,9 +12,17 @@ class Articles {
         this.imgLink = `${artist}-${title}.jpg`.split(" ").join("");
     }
 
-    static async findAll(table) {
-        const sql = `SELECT * FROM ??;`;
-        return await pool.query(sql, [table]);
+    static async getSearch() {
+        const sql = `
+        SELECT 'video' AS type, title, artist, FROM videos
+        UNION ALL
+        SELECT 'album' AS type, title,  FROM albums
+        UNION ALL
+        SELECT 'single' AS type, title,  FROM singles
+        ORDER BY like_count DESC
+        LIMIT 10;
+        `;
+        return await pool.query(sql)
     }
 
     static async getHomeLatest(table) {
@@ -34,41 +42,29 @@ class Articles {
         return await pool.query(sql, [table]);
     }
 
-    static async getHomeTrending(){
-        const currentMonth = new Date().getMonth() + 1;
-        const currentYear = new Date().getFullYear();
-
-        const previousYear = currentMonth === 1 ? currentYear - 1 : currentYear;
-        const previousMonth = currentMonth === 1 ? 12 : currentMonth - 1;
-
+    static async getHomeTrending() {
         const sql = `
+        SELECT table_name, likesCount, imgLink, artist, title
+        FROM (
             SELECT 
-                'Videos' AS table_name, likesCount, imgLink, artist, title
+                'Videos' AS table_name, likesCount, imgLink, artist, title, timeStamp
             FROM 
                 videos
-            WHERE 
-                (MONTH(timeStamp) = ? AND YEAR(timeStamp) = ?)
-                OR (MONTH(timeStamp) = ? AND YEAR(timeStamp) = ?)
             UNION ALL
             SELECT 
-                'Albums' AS table_name, likesCount, imgLink, artist, title
+                'Albums' AS table_name, likesCount, imgLink, artist, title, timeStamp
             FROM 
                 albums
-            WHERE 
-                (MONTH(timeStamp) = ? AND YEAR(timeStamp) = ?)
-                OR (MONTH(timeStamp) = ? AND YEAR(timeStamp) = ?)
             UNION ALL
             SELECT 
-                'Singles' AS table_name,likesCount, imgLink, artist, title
+                'Singles' AS table_name, likesCount, imgLink, artist, title, timeStamp
             FROM 
                 singles
-            WHERE 
-                (MONTH(timeStamp) = ? AND YEAR(timeStamp) = ?)
-                OR (MONTH(timeStamp) = ? AND YEAR(timeStamp) = ?)
-            ORDER BY likesCount DESC
-            LIMIT 7;
+        ) AS combined_data
+        ORDER BY YEAR(timeStamp) DESC, MONTH(timeStamp) DESC, likesCount DESC
+        LIMIT 7;
         `;
-        return await pool.query(sql, [currentMonth, currentYear, previousMonth, previousYear, currentMonth, currentYear, previousMonth, previousYear, currentMonth, currentYear, previousMonth, previousYear])
+        return await pool.query(sql)
     }
 
     static async getTableLatest(table) {
@@ -80,13 +76,7 @@ class Articles {
         return await pool.query(sql, [table]);
     }
 
-    static async getLatestArticles(table, offsetNum){
-        const currentMonth = new Date().getMonth() + 1;
-        const currentYear = new Date().getFullYear();
-
-        const previousYear = currentMonth === 1 ? currentYear - 1 : currentYear;
-        const previousMonth = currentMonth === 1 ? 12 : currentMonth - 1;
-
+    static async getRecentArticles(table, offset) {
         const sql = `
         SELECT imgLink, artist, title, 
             CASE 
@@ -96,20 +86,18 @@ class Articles {
             END AS review,
             color1, 
             color2, 
-            color3
-        FROM 
-            ??
-        WHERE 
-            (MONTH(timeStamp) = ? AND YEAR(timeStamp) = ?)
-            OR (MONTH(timeStamp) = ? AND YEAR(timeStamp) = ?)
+            color3,
+            timeStamp,
+            likesCount
+        FROM ??
         ORDER BY 
-            MONTH(timeStamp) DESC, likesCount DESC
-        LIMIT 16 OFFSET ?;
+            YEAR(timeStamp) DESC, MONTH(timeStamp) DESC, likesCount DESC
+        LIMIT 32 OFFSET ?;
         `;
-        return await pool.query(sql, [table, currentMonth, currentYear, previousMonth, previousYear, offsetNum]);
+        return await pool.query(sql, [table, offset]);
     }
 
-    static async getHomeFeatured(){
+    static async getHomeFeatured() {
         const sql = `
         SELECT customTitle, title, artist, color1,
             CASE 
@@ -144,7 +132,7 @@ class Articles {
         return await pool.query(sql);
     }
 
-    static async getFeaturedByTable(table){
+    static async getFeaturedByTable(table) {
         const sql = `
         SELECT customTitle, artist, title, imgLink,
             CONCAT(

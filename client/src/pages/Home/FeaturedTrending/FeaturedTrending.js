@@ -1,7 +1,7 @@
 //Components
 import Featured from "./Featured/Featured"
 import Trendning from "./Trending/Trendning"
-import useTableData1 from "../../../hooks/useTableData1";
+import useTableData from "../../../hooks/useTableData";
 import { getHomeTrending, getHomeFeatured } from "../../../utils/getData";
 
 const FeaturedTrending = () => {
@@ -9,8 +9,8 @@ const FeaturedTrending = () => {
     <div className="Featured-Trending-Flexbox">
         <div className="Featured-Trending-Container">
           <div className="Featured-Trending-Container2">
-              <Featured dataArray={useTableData1(getHomeFeatured)}/>
-              <Trendning dataArray={useTableData1(getHomeTrending)}/>
+              <Featured dataArray={useTableData(getHomeFeatured, null, null)}/>
+              <Trendning dataArray={useTableData(getHomeTrending, null, null)}/>
           </div>
         </div>
     </div>

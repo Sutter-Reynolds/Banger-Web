@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 
-const useTableData1 = (func) => {
+const useTableData = (func, table, val) => {
     const [data, setData] = useState([]);
   
     useEffect(() => {
       const fetchData = async () => {
         try {
-            const Data = await func();
+            const Data = await func(table, val);
             setData(Data);
         } catch (error) {
           console.error(error);
@@ -14,9 +14,9 @@ const useTableData1 = (func) => {
       };
 
       fetchData();
-    }, [func]);
+    }, [func, table, val]);
 
     return data;
 }
 
-export default useTableData1;
+export default useTableData;

@@ -19,7 +19,7 @@
     animation: gradient 15s ease infinite;
     border: 0px solid #FFFFFF20;
     border-width: 1px 0px;
-    margin: 0.1vw 0vw;
+    margin: 1px 0px;
 }
 
 @keyframes gradient {
@@ -107,7 +107,7 @@
 .Featured-Singles-Albums-Videos-Scroll button {
     height: 1vw;
     width: 1vw;
-    margin: 0% 0.65%;
+    margin: 0% 0.9%;
     background-color: #95b1db30;
     border: 1px solid #95b1db30;
     box-shadow: 0px 0px 2px 1px #FFFFFF05;
@@ -262,24 +262,32 @@
 
 
 /* Main Section */
-.Main-Singles-Albums-Videos {
-    position: relative;
+.Main-Singles-ALbums-Video-Background {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    align-self: center;
     width: 100%;
+    position: relative;
     backdrop-filter: blur(5px);
     border-width: 1px 0px;
     background-color: #95b1db35;
 }
 
+
+.Main-Singles-Albums-Videos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #95b1db20;
+    border: 0px solid #FFFFFF20;
+    border-width: 1px 0px;
+    border-width: 0px 1px;
+}
+
 .Main-Singles-Albums-Videos-Container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border-width: 1px 0px;
-    background-color: #95b1db20;
-    border: 0px solid #FFFFFF20;
-    border-width: 0px 1px;
 }
 
 .Main-Singles-Albums-Videos-Aritcle {
@@ -377,6 +385,31 @@
     transition: color .3s;
 }
 
+.Main-Singles-ALbums-Video-PageChanges {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5%;
+    background-color: #95b1db20;
+}
+
+.Main-Singles-ALbums-Video-Load-More {
+    font-size: 2.2vw;
+    background: transparent;
+    border: 1px solid #FFFFFF20;
+    padding: 2% 4.5%;
+    font-family: 'Cormorant', serif;
+    color: #FFFFFF99;
+    transition: color .3s, background-color .3s, border .3s;
+}
+
+.Main-Singles-ALbums-Video-Load-More:hover {
+    background-color: #FFFFFF10;
+    border-color: #FFFFFF40;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
 @media screen and (min-width: 1321px) {
     /* Featured Section */
 
@@ -406,7 +439,6 @@
     .Featured-Singles-Albums-Videos-Scroll button {
         height: 13.1875px;
         width: 13.1875px;
-        margin: 0px 6.6px;
     }
 
     /* Latests Section */
@@ -433,7 +465,6 @@
     /* Featured Section */
     .Featured-Singles-Albums-Videos-Container {
         height: 540px;
-        margin: 1.5px 0px;
     }
 
     .Featured-Singles-Albums-Videos-Constraint {
@@ -481,6 +512,7 @@
 
 
     /* Main Section */
+
     .Main-Singles-Albums-Videos-Container {
         width: 1500px;
     }
@@ -507,6 +539,16 @@
         font-size: 20.25px;
         line-height: 24.75px;
         padding: 21px;
+    }
+
+    .Main-Singles-ALbums-Video-PageChanges {
+        padding: 37.5px;
+    }
+
+    .Main-Singles-ALbums-Video-Load-More {
+        font-size: 33px;
+        padding: 28.5px 64.125px;
+
     }
 
 }

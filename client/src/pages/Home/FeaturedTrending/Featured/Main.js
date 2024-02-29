@@ -4,7 +4,6 @@ import "../../../../styles/utils/shade.css";
 const Main = ({ dataArray, currentArticle, currentArticles }) => {
   const subArticles = 5;
   const { artist, title, customTitle, review, imgLink, color1 } = useDataValues(dataArray[currentArticle + subArticles * currentArticles]);
-  console.log(color1);
 
   return (
     <section className="Featured-Main" style={{borderColor: `${color1}25`, outline: `1px solid ${color1}50`}}>

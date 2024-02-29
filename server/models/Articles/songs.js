@@ -37,6 +37,16 @@ class Songs extends Albums {
 
     }
 
+    static async getSongByAlbumId(table, albumId) {
+        const sql = `
+        SELECT title, review, spotifyLink 
+        FROM ?? 
+        WHERE albumsId = ?;
+        `
+
+        return await pool.query(sql, [table, albumId])
+    }
+
 }
 
 export default Songs;
