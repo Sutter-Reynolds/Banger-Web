@@ -12,17 +12,75 @@ class Articles {
         this.imgLink = `${artist}-${title}.jpg`.split(" ").join("");
     }
 
-    static async getSearch() {
+    static async getSearch(search) {
         const sql = `
-        SELECT 'video' AS type, title, artist, FROM videos
-        UNION ALL
-        SELECT 'album' AS type, title,  FROM albums
-        UNION ALL
-        SELECT 'single' AS type, title,  FROM singles
-        ORDER BY like_count DESC
-        LIMIT 10;
+        SELECT artist, title, table_name, albumsTitle, review, customTitle, imgLink
+        FROM (
+            SELECT *,
+            (SELECT SUM(exact_match_count) FROM (
+                SELECT COUNT(DISTINCT word) AS exact_match_count
+                FROM (
+                    SELECT SUBSTRING_INDEX(SUBSTRING_INDEX(?, ' ', n.digit+1), ' ', -1) as word
+                    FROM
+                    (SELECT 0 as digit UNION ALL SELECT 1 UNION ALL SELECT 2 UNION ALL SELECT 3) as n
+                    WHERE SUBSTRING_INDEX(SUBSTRING_INDEX(?, ' ', n.digit+1), ' ', -1) <> ''
+                ) AS search_words
+                WHERE UPPER(artist) LIKE CONCAT('%', UPPER(search_words.word), '%')
+                    OR UPPER(title) LIKE CONCAT('%', UPPER(search_words.word), '%')
+                    OR UPPER(artistTitle) LIKE CONCAT('%', UPPER(search_words.word), '%')
+                ) AS exact_match) AS exact_match
+        FROM (
+            SELECT artist, title, likesCount, 'Videos' AS table_name, customTitle, imgLink,
+                CASE 
+                    WHEN RIGHT(SUBSTRING_INDEX(review, ' ', 50), 1) IN (',', '!', '.') 
+                        THEN CONCAT(SUBSTRING_INDEX(review, ' ', 49), '...')
+                    ELSE CONCAT(SUBSTRING_INDEX(review, ' ', 50), '...')
+                END AS review,
+                CONCAT(artist, ' ', title) AS artistTitle,
+                NULL AS albumsTitle
+            FROM videos
+            UNION ALL
+            SELECT artist, title, likesCount, 'Singles' AS table_name, customTitle, imgLink,
+                CASE 
+                    WHEN RIGHT(SUBSTRING_INDEX(review, ' ', 50), 1) IN (',', '!', '.') 
+                        THEN CONCAT(SUBSTRING_INDEX(review, ' ', 49), '...')
+                    ELSE CONCAT(SUBSTRING_INDEX(review, ' ', 50), '...')
+                END AS review,
+                CONCAT(artist, ' ', title) AS artistTitle,
+                NULL AS albumsTitle
+            FROM singles
+            UNION ALL
+            SELECT artist, title, likesCount, 'Albums' AS table_name, customTitle, imgLink,
+                CASE 
+                    WHEN RIGHT(SUBSTRING_INDEX(review, ' ', 50), 1) IN (',', '!', '.') 
+                        THEN CONCAT(SUBSTRING_INDEX(review, ' ', 49), '...')
+                    ELSE CONCAT(SUBSTRING_INDEX(review, ' ', 50), '...')
+                END AS review,
+                CONCAT(artist, ' ', title) AS artistTitle,
+                NULL AS albumsTitle
+            FROM albums
+            UNION ALL
+            SELECT a.artist, s.title, -1, 'Songs' AS  table_name, a.customTitle, a.imgLink, s.review,
+                CONCAT(a.artist, ' ', a.title, ' ', s.title) AS artistTitle,
+                a.title
+            FROM (
+                SELECT NULL AS artist, title, NULL AS likesCount,
+                    CASE 
+                        WHEN RIGHT(SUBSTRING_INDEX(review, ' ', 50), 1) IN (',', '!', '.') 
+                            THEN CONCAT(SUBSTRING_INDEX(review, ' ', 49), '...')
+                        ELSE CONCAT(SUBSTRING_INDEX(review, ' ', 50), '...')
+                    END AS review,
+                    title AS artistTitle, albumsId
+                FROM songs
+            ) AS s
+            LEFT JOIN albums a ON s.albumsId = a.Id
+        ) AS all_media
+        ) AS matches
+        WHERE exact_match >= 1
+        ORDER BY exact_match DESC
+        LIMIT 5;
         `;
-        return await pool.query(sql)
+        return await pool.query(sql, [search, search, search, search, search, search])
     }
 
     static async getHomeLatest(table) {

@@ -1,5 +1,14 @@
 import api from "./api.js";
 
+const getSearch = async (search) => {
+    try{
+        const response = await api.get(`/singles/search?search=${search}`);
+        return (response.data.article);
+    } catch (err) {
+        console.log(err)
+    }
+}
+ 
 const getHomeFeatured = async () => {
     try {
         const response = await api.get(`/singles/home-featured`);
@@ -72,4 +81,4 @@ const getSongByAlbumId = async (albumId) => {
     }
 }
 
-export { getHomeLatest, getHomeTrending, getLatestTable, getRecentWithPage, getHomeFeatured, getTableFeatured, getArticle, getSongByAlbumId };
+export { getSearch, getHomeLatest, getHomeTrending, getLatestTable, getRecentWithPage, getHomeFeatured, getTableFeatured, getArticle, getSongByAlbumId };

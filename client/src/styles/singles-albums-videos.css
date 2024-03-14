@@ -12,7 +12,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 36vw;
+    height: 40vw;
     width: 100%;
     background-color: #FFFFFF08;
     background-size: 300% 300%;
@@ -38,9 +38,9 @@
 
 .Featured-Singles-Albums-Videos-Constraint {
     display: grid;
-    grid-template-columns: 50vw 35vw;
+    grid-template-columns: 55vw 35vw;
     justify-content: space-evenly;
-    gap: 3%;
+    gap: 0.5%;
     width: 100%;
 }
 
@@ -56,11 +56,11 @@
 .Featured-Singles-Albums-Videos-Info-Title {
     position: absolute;
     width: 100%;
-    top: -7.5%;
+    top: -9.5%;
     text-align: center;
     font-family: 'Grape Nuts', cursive;
     text-decoration: underline;
-    font-size: 1.4vw;
+    font-size: 1.55vw;
 }
 
 .Featured-Singles-Albums-Videos-Currnet {
@@ -74,23 +74,24 @@
 }
 
 .Featured-Singles-Albums-Videos-Currnet-Title h3 {
-    font-size: 2.2vw;
-    line-height: 2.6vw;
+    font-size: 2.1vw;
+    line-height: 2.15vw;
+    margin-bottom: .5%;
 }
 
 .Featured-Singles-Albums-Videos-Currnet-Title h4 {
-    font-size: 1.25vw;
-    line-height: 1.2vw;
-    padding-bottom: 1.75%;
+    font-size: 0.95vw;
+    line-height: 1vw;
+    padding-bottom: 0.75%;
     color: #FFFFFF99;
     font-family: 'Cormorant', serif;
     border-bottom: 1px solid #FFFFFF10;
 }
 
 .Featured-Singles-Albums-Videos-Currnet-Summary {
-    font-size: 1.4vw;
-    line-height: 1.75vw;
-    padding-top: 1.25%;
+    font-size: 1.8vw;
+    line-height: 1.85vw;
+    padding-top: 1%;
     font-family: 'Cormorant', serif;
     margin-bottom: 1%;
     color: #EAEAEA;
@@ -105,8 +106,8 @@
 }
 
 .Featured-Singles-Albums-Videos-Scroll button {
-    height: 1vw;
-    width: 1vw;
+    height: .8vw;
+    width: .8vw;
     margin: 0% 0.9%;
     background-color: #95b1db30;
     border: 1px solid #95b1db30;
@@ -207,8 +208,8 @@
 
 .Latests-Singles-Albums-Videos-Title {
     position: absolute;
-    top: 5.5%;
-    font-size: 1.3vw;
+    top: 5%;
+    font-size: 1.4vw;
     font-family: 'Grape Nuts', cursive;
     text-decoration: underline;
 }
@@ -218,7 +219,7 @@
     align-content: center;
     justify-content: space-evenly;
     grid-auto-flow: column;
-    padding: 3% 0% 1.5% 0%;
+    padding: 3.5% 0% 2% 0%;
     gap: 0.25%;
     width: 100%;
 }
@@ -231,29 +232,31 @@
 
 .Latests-Image-Container {
     position: relative;
-    width: 5.25vw;
-    height: 5.25vw;
+    width: 7vw;
+    height: 7vw;
     padding: 1px;
     border: 1px solid #8f91a240;
+    margin-bottom: 2.5%;
 }
 
 .Latests-Singles-Albums-Videos-Content-Description-Container {
     display: flex;
     justify-content: center;
     text-align: center;
-    margin-top: 8%;
-    width: 8vw;
+    margin-top: 6%;
+    width: 10vw;
 }
 
 .Latests-Singles-Albums-Videos-Content-Description h3 {
-    font-size: 1.05vw;
-    line-height: .95vw;
+    font-size: 1.25vw;
+    line-height: 1.25vw;
+    margin-bottom: 0.25%;
     color: #8f91a2;
 }
 
 .Latests-Singles-Albums-Videos-Content-Description h4 {
-    font-size: 1.25vw;
-    line-height: 1.15vw;
+    font-size: 1.6vw;
+    line-height: 1.3vw;
     color: #8f91a299;
     font-family: 'Cormorant', serif;
 }
@@ -297,13 +300,13 @@
     justify-content: center;
     align-items: center;
     border-bottom: 1px solid #FFFFFF10;
-    padding: 4% 0px;
+    padding: 2.5% 0px;
 }
 
 .Main-Img-Info {
     position: relative;
     height: 100%;
-    width: 23.5%;
+    width: 26%;
     display: flex;
     align-items: center;
     text-align: center;
@@ -344,16 +347,16 @@
 }
 
 .Main-Article-Artist {
-    font-size: 1.25vw;
-    line-height: 1.25vw;
+    font-size: 1.45vw;
+    line-height: 1.45vw;
     font-family: 'Cormorant', serif;
     color: #FFFFFF99;
     transition: color .3s;
 }
 
 .Main-Article-Title {
-    font-size: 1.25vw;
-    line-height: 1.25vw;
+    font-size: 1.45vw;
+    line-height: 1.45vw;
     font-family: 'Cormorant', serif;
     color: #FFFFFF99;
     transition: color .3s;
@@ -364,7 +367,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 60%;
+    width: 62.5%;
     height: 80%;
     padding: 1px 1px;
     border: 1px solid #FFFFFF30;
@@ -373,9 +376,9 @@
 }
 
 .Main-Article-Summary p {
-    font-size: 1.35vw;
-    line-height: 1.65vw;
-    padding: 0.2vw 0.4vw;
+    font-size: 1.65vw;
+    line-height: 1.7vw;
+    padding: 2% 4%;
     width: 100%;
     color: #FFFFFF99;
     text-align: center;
@@ -394,10 +397,10 @@
 }
 
 .Main-Singles-ALbums-Video-Load-More {
-    font-size: 2.2vw;
+    font-size: 2.65vw;
     background: transparent;
     border: 1px solid #FFFFFF20;
-    padding: 2% 4.5%;
+    padding: 1.25% 2.25%;
     font-family: 'Cormorant', serif;
     color: #FFFFFF99;
     transition: color .3s, background-color .3s, border .3s;
@@ -414,7 +417,7 @@
     /* Featured Section */
 
     .Featured-Singles-Albums-Videos-Info-Title {
-        font-size: 18.48px;
+        font-size: 20.46px;
     }
 
     .Featured-Singles-Albums-Videos-Currnet {
@@ -422,38 +425,60 @@
     }
 
     .Featured-Singles-Albums-Videos-Currnet-Title h3 {
-        font-size: 29.04px;
-        line-height: 34.32px;
+        font-size: 27.72px;
+        line-height: 28.38px;
     }
 
     .Featured-Singles-Albums-Videos-Currnet-Title h4 {
-        font-size: 16.5px;
-        line-height: 15.84px;
+        font-size: 12.54px;
+        line-height: 13.2px;
     }
 
     .Featured-Singles-Albums-Videos-Currnet-Summary {
-        font-size: 18.48px;
-        line-height: 23.1px;
+        font-size: 23.76px;
+        line-height: 24.42px;
     }
 
     .Featured-Singles-Albums-Videos-Scroll button {
-        height: 13.1875px;
-        width: 13.1875px;
+        height: 10.5469px;
+        width: 10.5469px;
     }
 
     /* Latests Section */
     .Latests-Singles-Albums-Videos-Title {
-        font-size: 17.16px;
+        font-size: 18.48px;
     }
 
     .Latests-Singles-Albums-Videos-Content-Description h3 {
-        font-size: 13.86px;
-        line-height: 12.54px;
+        font-size: 16.5px;
+        line-height: 16.5px;
     }
 
     .Latests-Singles-Albums-Videos-Content-Description h4 {
-        font-size: 16.5px;
-        line-height: 15.18px;
+        font-size: 21.12px;
+        line-height: 17.16px;
+    }
+
+    /* Main */
+    .Main-Article-Artist {
+        font-size: 19.14px;
+        line-height: 19.14px;
+    }
+
+    .Main-Article-Title {
+        font-size: 19.14px;
+        line-height: 19.14px;
+    }
+
+    .Main-Article-Summary p {
+        font-size: 21.78px;
+        line-height: 22.44px;
+    }
+
+    .Main-Singles-ALbums-Video-Load-More {
+        font-size: 34.98px;
+        padding: 15.672px 28.203px;
+
     }
 
 }
@@ -464,11 +489,11 @@
 
     /* Featured Section */
     .Featured-Singles-Albums-Videos-Container {
-        height: 540px;
+        height: 600px;
     }
 
     .Featured-Singles-Albums-Videos-Constraint {
-        grid-template-columns: 750px 525px;
+        grid-template-columns: 825px 525px;
         width: 1500px;
     }
 
@@ -496,18 +521,19 @@
 
     /* Latests Section */
     .Latests-Singles-Albums-Videos-Container {
-        grid-template-columns: 120px 120px 120px 120px 120px 120px 120px;
-        width: 1800px;
-        padding: 37.5px 0px 22.5px 0px;
+        grid-template-columns: 150px 150px 150px 150px 150px 150px 150px;
+        justify-content: center;
+        gap: 5%;
+        padding: 45px 0px 22.5px 0px;
     }
 
     .Latests-Image-Container {
-        width: 74.75px;
-        height: 74.75px;
+        width: 101px;
+        height: 101px;
     }
 
     .Latests-Singles-Albums-Videos-Content-Description-Container {
-        width: 120px;
+        width: 150px;
     }
 
 
@@ -525,30 +551,9 @@
         height: 277.5px;
     }
 
-    .Main-Article-Artist {
-        font-size: 18.75px;
-        line-height: 18.75px;
-    }
-
-    .Main-Article-Title {
-        font-size: 18.75px;
-        line-height: 18.75px;
-    }
-
-    .Main-Article-Summary p {
-        font-size: 20.25px;
-        line-height: 24.75px;
-        padding: 21px;
-    }
-
     .Main-Singles-ALbums-Video-PageChanges {
         padding: 37.5px;
     }
 
-    .Main-Singles-ALbums-Video-Load-More {
-        font-size: 33px;
-        padding: 28.5px 64.125px;
-
-    }
 
 }

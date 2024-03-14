@@ -8,7 +8,26 @@ class ArticlesController {
 
     getSearch = async (req, res, next) => {
         try {
-            const [article, _] = await this.model.getSearch();
+            const search = req.query.search
+            const [articleArray, _] = await this.model.getSearch(search);
+            const table = [];
+            let temp = [];
+            const article = [];
+            articleArray.forEach(element => {
+                if(!table.includes(element.table_name)){
+                    table.push(element.table_name);
+                }
+            });
+            table.forEach(element =>{
+                articleArray.forEach(element1 => {
+                    if(element === element1.table_name){
+                        temp.push(element1);
+                    }
+                });
+                article.push(temp);
+                temp = [];
+            });
+            
             res.status(200).json({ article });
         } catch (err) {
             console.log(err);

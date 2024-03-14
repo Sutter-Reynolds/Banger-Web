@@ -2,23 +2,23 @@
     display: flex;
     justify-content: space-evenly;
     align-items: flex-end;
-    height: 120px;
+    height: 132px;
     border-bottom: 1px solid #95b1db80;
     padding-bottom: 10px;
     margin-bottom: 1px;
 }
 
-.Hero > * {
-    width: 260px;
+.Hero>* {
+    width: 33.33%;
 }
 
-.Submit-Button-Hero{
+.Submit-Button-Hero {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.Social-Link-Container{
+.Social-Link-Container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,26 +31,94 @@
     font-size: 20px;
 }
 
-.Submit-Button-Hero p{
-    font-size: 14px;
-    font-family: 'Cormorant', serif;
-    line-height: 12px;
+.Submit-Button-Hero p {
     font-size: 16px;
+    font-family: 'Cormorant', serif;
     margin-bottom: 4px;
 }
 
-.Submit-Button-Hero p, 
-.Submit-Button-Hero button{
+.Submit-Button {
+    border: 1px #FFFFFF10 solid;
+    color: #FFFFFF;
+    border-radius: 24px;
+    padding: 6px 24px;
+    font-family: 'Castoro', serif;
+    font-size: 16px;
+    background-color: #FFFFFF10;
+    cursor: pointer;
+    margin-bottom: 18px;
+    font-family: 'Cormorant', serif;
+    text-decoration: none;
+}
+
+.Submit-Button:hover {
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s, color 0.3s;
+    color: #95b1db;
+    border-color: #95b1db20;
+    background-color: #95b1db15;
+    box-shadow: 0px 0px 1px 1px #95b1db05;
+}
+
+.Submit-Button-Hero h4 {
+    font-family: 'Cormorant', serif;
+    line-height: 12px;
+    font-size: 16px;
+}
+
+.Submit-Button-Hero p,
+.Submit-Button-Hero button {
     transition: color .25s, border-color .25s;
 }
 
-.Submit-Button-Hero:hover p, 
-.Submit-Button-Hero:hover button{
+.Submit-Button-Hero:hover p,
+.Submit-Button-Hero:hover button {
     color: #95b1db;
 }
 
-.Submit-Button-Hero:hover button{
+.Submit-Button-Hero:hover button {
     background-color: #95b1db15;
-    border-color: #95b1db20; 
+    border-color: #95b1db20;
     box-shadow: 0px 0px 1px 1px #95b1db05;
+}
+
+@media screen and (max-width: 1024px) {
+    .Hero {
+        height: 108px;
+    }
+
+    .Moto {
+        font-size: 16px; 
+    }
+
+    .Submit-Button-Hero p {
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+
+    .Submit-Button {
+        font-size: 13px;
+        padding: 5px 22px;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1320px) {
+    .Hero {
+        height: 120px;
+    }
+
+    .Moto {
+        font-size: 18px;
+    }
+
+    .Submit-Button-Hero p {
+        font-size: 15px;
+        margin-bottom: 6px;
+    }
+
+    .Submit-Button {
+        font-size: 15px;
+        padding: 6px 24px;
+        margin-bottom: 10px;
+    }
 }

@@ -68,7 +68,7 @@
 .Articles-Date {
     font-family: 'Cormorant', serif;
     display: inline-block;
-    font-size: 1vw;
+    font-size: 15px;
     margin-bottom: 0.25%;
     align-self: flex-end;
     color: #FFFFFF99;
@@ -78,7 +78,7 @@
     font-family: 'Cormorant', serif;
     display: flex;
     gap: 1%;
-    font-size: 1vw;
+    font-size: 15px;
     justify-content: center;
 }
 
@@ -91,13 +91,13 @@
 }
 
 .Articles-Header {
-    font-size: 1.6vw;
+    font-size: 24px;
     margin-bottom: 0.1%;
 }
 
 .Articles-Review {
-    font-size: 1.15vw;
-    line-height: 2vw;
+    font-size: 17.25px;
+    line-height: 30px;
     color: #EAEAEA;
 }
 
@@ -109,7 +109,35 @@
 .Iframe {
     height: 80px;
     width: 40%;
+    min-width: 320px;
     margin-bottom: 5%;
+}
+
+@media screen and (max-width: 1024px) {
+    .Article-Info-Container h3 {
+        font-size:  22.528px;
+        line-height: 20.48px;
+    }
+    
+    .Article-Info-Container h4 {
+        font-size: 12.288px;
+    }
+
+    .Articles-Date {
+        font-size: 14px;
+    }
+    
+    .Articles-Credits-Container {
+        font-size: 14px;
+    }
+    .Articles-Header {
+        font-size: 23.5px;
+    }
+    
+    .Articles-Review {
+        font-size: 16px;
+        line-height: 29.5px;
+    }
 }
 
 
@@ -142,24 +170,5 @@
     .Article-Info-Container h4 {
         font-size: 18px;
     }
-
-    .Articles-Date {
-        font-size: 15px;
-    }
-
-    .Articles-Credits-Container {
-        font-size: 15px;
-    }
-
-    .Articles-Header {
-        font-size: 24px;
-    }
-
-    .Articles-Review {
-        font-size: 17.25px;
-        line-height: 30px;
-    }
-
-
 
 }

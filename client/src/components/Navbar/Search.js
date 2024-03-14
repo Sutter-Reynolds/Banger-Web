@@ -1,40 +1,118 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { useState, useEffect } from "react";
-import image from "../../assets/BillieEilish-LostCause.jpg"
-import "../../styles/utils/imgFitter.css"
+import React, { useState, useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { getSearch } from '../../utils/getData.js';
+import SearchArticles from './SearchArticles.js';
+import '../../styles/utils/imgFitter.css';
 
 const Search = () => {
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState('');
+  const [viewArticles, setViewArticles] = useState([]);
+  const [isInputFocused, setInputFocused] = useState(false);
+  const searchContainerRef = useRef(null);
+  const articleRefs = useRef([]);
+  const location = useLocation();
+
   useEffect(() => {
-    console.log(searchTerm)
+    const fetchData = async () => {
+      const data = await getSearch(searchTerm);
+      let updatedArticles = [];
+      let k = 0;
+      if (data.length !== 0) {
+        for (let j = 0; j < data.length; j++) {
+          updatedArticles.push(
+            <p key={(j + 1) * 10} className="Search-Table">
+              {data[j][0].table_name}
+            </p>
+          );
+          for (let i = 0; i < data[j].length; i++) {
+            (function (index) {
+              updatedArticles.push(
+                <SearchArticles
+                  key={index}
+                  data={data[j][i]}
+                  table={data[j][0].table_name}
+                  ref={(el) => {
+                    if (el !== null) {
+                      articleRefs.current[index] = el;
+                    }
+                  }}
+                />
+              );
+            })(k);
+            k++;
+          }
+        }
+      }
+      setViewArticles(updatedArticles);
+    };
+    fetchData();
   }, [searchTerm]);
+
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      let isOutside = true;
+
+      if (
+        searchContainerRef.current &&
+        searchContainerRef.current.contains(event.target)
+      ) {
+        isOutside = false;
+      }
+
+      articleRefs.current.forEach((ref) => {
+        if (ref && ref.contains(event.target)) {
+          isOutside = false;
+        }
+      });
+
+      if (isOutside) {
+        setInputFocused(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleOutsideClick);
+
+    return () => {
+      document.removeEventListener('mousedown', handleOutsideClick);
+    };
+  }, []);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
+  useEffect(() => {
+    if(searchTerm !== ""){
+      setSearchTerm("");
+    }
+  }, [location]);
 
   return (
     <>
-      <form className="Search-Form">
-        <input type="search" values={searchTerm} placeholder="Search" className="Search-Input" onChange={(e) => setSearchTerm(e.target.value)} />
-        <button type="submit" className="Search-Button"><FontAwesomeIcon icon={faSearch} size="lg" /></button>
+      <form className="Search-Form" onSubmit={handleSubmit} ref={searchContainerRef}>
+        <input
+          type="search"
+          value={searchTerm}
+          placeholder="Search"
+          className="Search-Input"
+          onChange={(e) => setSearchTerm(e.target.value)}
+          onFocus={() => setInputFocused(true)}
+        />
+        <button type="submit" className="Search-Button">
+          <FontAwesomeIcon icon={faSearch} />
+        </button>
       </form>
-      <div className="Search-Container">
-        {["Singles", "Videos", "Albums"].map((element, index) => (
-          <>
-            <p key={index} className="Search-Table">{element}</p>
-            <div className="Search-Articles-Container">
-            <article className="Search-Article">
-              <div className="Image-Container-2"><img src={image} alt="" className="img-fitter2"/></div>
-              <h4>SZA - Doves in the Wind</h4>
-              <h3>We had a clothing store in my town that would play this, and it was just fucking disappointing every time.
-                  "I love bad [bleep] that's my [bleep]in' problem, and yeah I like to [bleep] I got a [bleep]in' problem"
-                really just isn't the same thing at all anymore.</h3>
-              <p></p>
-            </article>
+      {isInputFocused && searchTerm !== '' && (
+        <div className="Search-Container">
+          <div className="Search-Constraint">
+            <div className="Search-Table-Container">{viewArticles}</div>
           </div>
-          </>
-        ))}
-      </div>
+        </div>
+      )}
     </>
-  )
-}
+  );
+};
 
-export default Search
+export default Search;

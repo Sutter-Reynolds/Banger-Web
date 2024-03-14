@@ -6,6 +6,7 @@ import Footer from "./components/Footer/Footer";
 import Home  from "./pages/Home/Home";
 import Article from "./pages/Articles/Article";
 import SinglesAlbumsVideos from "./pages/SinglesAlbumsVideos/SinglesAlbumsVideos";
+import Submit from "./pages/Submit/Submit";
 import useNavbarScroll from "./hooks/useNavbarScroll";
 
 //Hooks
@@ -30,6 +31,7 @@ const App = () => {
                     <Route path="/Singles/Articles/*" element={<Article type="singles"/>}/>
                     <Route path="/Albums/Articles/*" element={<Article type="albums"/>}/>
                     <Route path="/Videos/Articles/*" element={<Article type="videos"/>}/>
+                    <Route path="/Submit" element={<Submit/>}/>
                 </Routes>
             </main>
         <Footer/>

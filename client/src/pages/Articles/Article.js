@@ -27,7 +27,7 @@ const Article = ({ type }) => {
                 <>
                   <img className="img-fitter" src={imgLink} alt="" />
                   <div className="Shader3" />
-                  <div className="Artcle-background-Cover" style={{ backgroundColor: `${color1}30` }}>
+                  <div className="Artcle-background-Cover" style={{ backgroundColor: `${color1}25` }}>
                     <div className="Article-Info-Container">
                       <h3>{customTitle}</h3>
                       <h4>{`${artist} - ${title}`}</h4>

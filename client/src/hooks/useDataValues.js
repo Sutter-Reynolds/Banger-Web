@@ -18,6 +18,7 @@ const useDataValues = (Data) => {
   const [table, setTable] = useState("")
   const [articleLink, setArticleLink] = useState("");
   const [id, setID] = useState("")
+  const [albumsTitle, setAlbumsTitle] = useState("")
   
     useEffect(() => {
       const setValues = async () => {
@@ -48,6 +49,7 @@ const useDataValues = (Data) => {
               setTable(Data.table_name);
               setArticleLink(artLink);
               setID(Data.id)
+              setAlbumsTitle(Data.albumsTitle)
           } catch (error) {
             console.error(error);
           }
@@ -56,7 +58,7 @@ const useDataValues = (Data) => {
       setValues();
     }, [Data]);
 
-    return { artist, title, customTitle, timeStamp, review, imgLink, videoLink, spotifyLink, color1, color2, color3, creditName, creditTwitter, creditIG, table, articleLink, id };
+    return { artist, title, customTitle, timeStamp, review, imgLink, videoLink, spotifyLink, color1, color2, color3, creditName, creditTwitter, creditIG, table, articleLink, id, albumsTitle };
 }
 
 export default useDataValues;

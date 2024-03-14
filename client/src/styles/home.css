@@ -54,7 +54,7 @@
   width: 100%;
   height: 100%;
   background-color: #00000050;
-  backdrop-filter: invert(8%);
+  backdrop-filter: invert(35%);
 }
 
 .Featured-Main-Info-Container {
@@ -66,29 +66,29 @@
   width: 100%;
   height: 100%;
   background-color: #00000099;
-  backdrop-filter: invert(100%);
 }
 
 .Featured-Main-background-Cover h3 {
   padding: 0.25% 1%;
-  font-size: 2.2vw;
-  line-height: 2.5vw;
+  font-size: 1.9vw;
+  line-height: 1.9vw;
   width: 100%;
 }
 
 .Featured-Main-background-Cover h4 {
-  padding-bottom: 0.5%;
-  font-size: 1.2vw;
+  padding-bottom: 0.25%;
+  font-size: 1.05vw;
   font-family: 'Cormorant', serif;
   color: #FFFFFF99;
 }
 
 .Featured-Main-background-Cover p {
-  padding: 0.5% 1%;
-  font-size: 1.45vw;
-  line-height: 2vw;
+  padding: 0.5% 0%;
+  margin: 0% 2.5%;
+  font-size: 1.7vw;
+  line-height: 1.75vw;
   font-family: 'Cormorant', serif;
-  border-top: 1px solid #00000050;
+  border-top: 1px solid #FFFFFF10;
   color: #EAEAEA;
 }
 
@@ -140,7 +140,7 @@
   bottom: 0%;
   width: 100%;
   padding: 0px 6px 3px 6px;
-  font-size: 1.15vw;
+  font-size: 1.3vw;
   line-height: 1.3vw;
   font-family: 'Cormorant', serif;
   transition: color .3s;
@@ -148,9 +148,9 @@
 
 .Featured-Sub-Article h4 {
   position: absolute;
-  top: 24%;
+  top: 26%;
   right: -46%;
-  font-size: 1.2vw;
+  font-size: 1.1vw;
   width: 100%;
   color: #FFFFFF25;
   padding: 4%;
@@ -213,9 +213,9 @@
 }
 
 .Featured-Sub-Sections-Button {
-  height: 1.1vw;
-  width: 1.1vw;
-  margin: 0% 0.65%;
+  height: 1vw;
+  width: 1vw;
+  margin: 0% 0.75%;
   background-color: #95b1db30;
   border: 1px solid #95b1db30;
   box-shadow: 0px 0px 2px 1px #FFFFFF05;
@@ -291,7 +291,7 @@
   transition: background-color .3s, border-color .3s;
 }
 
-.Trending-Article-Lining:hover{
+.Trending-Article-Lining:hover {
   border-color: #95b1db42;
   background-color: #95b1db42;
 }
@@ -310,21 +310,21 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 32%;
+  width: 40%;
   overflow: hidden;
   margin: 0% 2%;
 }
 
 .Trending-Name-Artist {
-  font-size: 1.3vw;
-  line-height: 1.3vw;
+  font-size: 1.55vw;
+  line-height: 1.50vw;
   color: #EAEAEA;
   font-family: 'Cormorant', serif;
 }
 
 .Trending-Name-Title {
-  font-size: 1.25vw;
-  line-height: 1.25vw;
+  font-size: 1.35vw;
+  line-height: 1.3vw;
   color: #FFFFFF99;
   font-family: 'Cormorant', serif;
 }
@@ -377,7 +377,7 @@
 
 .LatestSong-Albums-Vidoes-Content-Container {
   width: 100%;
-  height: 124vw;
+  height: 134vw;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
@@ -385,16 +385,16 @@
 
 .Latests-Content {
   display: grid;
-  row-gap: 8%;
+  row-gap: 6%;
   position: relative;
-  width: 90%;
+  width: 100%;
   height: 90%;
   justify-self: center;
   padding: 10%;
 }
 
 .Latest-Styling {
-  height: 48vw;
+  height: 58vw;
   width: 100%;
   background-color: #95b1db99;
   border: .05vw solid #8f91a240;
@@ -404,7 +404,7 @@
 .Latests-Content h2 {
   position: absolute;
   width: 100%;
-  top: -2%;
+  top: -3%;
   font-size: 2.2vw;
   line-height: 5vw;
   text-align: center;
@@ -413,13 +413,13 @@
 
 .Latest-Img-Container {
   position: relative;
-  height: 14vw;
+  height: 16vw;
   width: 100%;
   border: .2vw solid #8f91a290;
 }
 
 .Latest-Info-Button-Sizer {
-  height: 34vw;
+  height: 42vw;
   width: 100%;
   padding: .75%;
   background-color: #00000099;
@@ -442,29 +442,29 @@
 .Latest-Info h3,
 .Latest-Date {
   display: inline-block;
-  margin-bottom: 6%;
+  margin-bottom: 4%;
 }
 
 .Latest-Info h3 {
-  font-size: 1.8vw;
-  line-height: 2vw;
+  font-size: 2.1vw;
+  line-height: 2.5vw;
   color: #FFFFFF;
 }
 
 .Latest-Date {
   color: #8f91a2;
-  font-size: 1.05vw;
+  font-size: 1vw;
   padding: 0% 1%;
 }
 
 .Latest-Summary {
   color: #8f91a2;
-  font-size: 1.15vw;
+  font-size: 1.65vw;
   height: 60%;
   margin-bottom: 5%;
   width: 100%;
   padding: 0% 1%;
-  line-height: 1.7vw;
+  line-height: 2.1vw;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -476,27 +476,26 @@
 
 .Latest-Button {
   height: 100%;
-  padding: .4vw .6vw;
+  padding: 2% 3%;
   background: transparent;
-  border: .1vw solid #8f91a2;
-  font-size: 1.05vw;
+  border: 1px solid #8f91a2;
+  font-size: 1.2vw;
   cursor: pointer;
   color: #8f91a2;
   border-radius: 2.5%;
-  transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+  transition: color 0.3s, border-color 0.3s;
 }
 
 .Latest-Button:hover {
   color: #EAEAEA;
-  background-color: #FFFFFF02;
-  border-color: #FFFFFF85;
+  border-color: #FFFFFF99;
 }
 
 .Latests-Content-Link-Container {
   position: absolute;
   width: 100%;
   text-align: center;
-  bottom: -1.8%;
+  bottom: -2%;
 }
 
 .Latests-Content a {
@@ -681,7 +680,7 @@
 /* Media Querry */
 
 /* Styles for phones */
-@media only screen and (max-width: 767px) {}
+@media screen and (max-width: 767px) {}
 
 /* Styles for tablets */
 @media screen and (max-width: 1024px) {
@@ -727,29 +726,29 @@
   .Featured-Sub-Sections-Button {
     margin: 0% 0.6%;
     margin-top: 0.5%;
-    height: 1.4vw;
-    width: 1.4vw;
+    height: 1.1vw;
+    width: 1.1vw;
   }
 
 
   .Featured-Main-Info-Container h3 {
-    font-size: 2.6vw;
-    line-height: 2.6vw;
+    font-size: 2.4vw;
+    line-height: 2.4vw;
   }
 
   .Featured-Main-Info-Container h4 {
-    font-size: 1.4vw;
+    font-size: 1.45vw;
   }
 
   .Featured-Main-Info-Container p {
-    font-size: 1.85vw;
-    line-height: 2.1vw;
+    font-size: 2.1vw;
+    line-height: 2.15vw;
   }
 
   /* Trending Section */
   .Trending-Container {
     display: grid;
-    grid-template-columns: 14.5% 14.5% 14.5% 14.5% 14.5%;
+    grid-template-columns: 19% 19% 19% 19% 19%;
     flex-direction: row;
     margin: 0.5% 0%;
     padding: 1% 0%;
@@ -764,8 +763,8 @@
 
   .Trending-Number {
     font-size: 1vw;
-    top: 3%;
-    right: -0.5%;
+    top: 2.5%;
+    right: 0%;
   }
 
   .Trending-Container h2 {
@@ -788,67 +787,95 @@
     display: flex;
     border: none;
     background: none;
-
     justify-content: space-between;
+  }
+
+  .Trending-Article-Lining:hover {
+    background-color: transparent;
+    border: none;
   }
 
   .Image-Container2 {
     box-shadow: none;
-    height: 6vw;
-    width: 6vw;
+    height: 7vw;
+    width: 7vw;
     margin: 0%;
     border: 1px solid #FFFFFF50;
   }
 
-  .Trending-Info-Container{
-    width: 6.5vw;
+  .Trending-Info-Container {
+    width: 10vw;
     text-align: right;
   }
 
   .Trending-Name-Artist {
-    font-size: 1.7vw;
-    line-height: 1.4vw;
-    margin-bottom: 4%;
+    font-size: 1.95vw;
+    line-height: 1.75vw;
+    margin-bottom: 2%;
   }
 
 
   .Trending-Name-Title {
-    font-size: 1.5vw;
-    line-height: 1.3vw;
+    font-size: 1.75vw;
+    line-height: 1.5vw;
   }
 
   /* Latest Section */
-  .Latests-Content{
+  .LatestSong-Albums-Vidoes-Content-Container {
+    height: 156vw;
+  }
+
+  .Latests-Content h2 {
+    top: -3%;
+    font-size: 2.4vw;
+  }
+
+  .Latests-Content {
     width: 100%;
+    padding: 2.5%;
+    row-gap: 4%;
   }
 
-  .Latest-Info h3,
-  .Latest-Date{
-    margin-bottom: 4%;
+  .Latest-Styling {
+    height: 62vw;
   }
 
-  .Latest-Info h3{
-    font-size: 2.1vw;
-    line-height: 2.3vw;
+  .Latest-Img-Container {
+    height: 18vw;
   }
 
-  .Latest-Info time{
-    font-size: 1.2vw;
+  .Latest-Info-Button-Sizer {
+    height: 44vw;
   }
 
-  .Latest-Summary{
-    height: 58%;
-    font-size: 1.3vw;
-    line-height: 1.8vw;
+  .Latest-Info h3 {
+    font-size: 2.3vw;
+    line-height: 2.7vw;
   }
 
-  .Latest-Button{
-    font-size: 1.1vw;
+  .Latest-Info time {
+    font-size: 1.15vw;
   }
 
-  .Trending-Article-Lining:hover{
-    border-color: transparent;
-    background-color: transparent;
+  .Latest-Summary {
+    height: 65%;
+    font-size: 1.9vw;
+    line-height: 2.35vw;
+  }
+
+  .Latest-Button {
+    font-size: 1.55vw;
+  }
+
+  .Latests-Content a {
+    font-size: 2vw;
+  }
+
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1320px) {
+  .LatestSong-Albums-Vidoes-Content-Container {
+    height: 144vw;
   }
 
 }
@@ -859,7 +886,7 @@
   }
 }
 
-@media screen and (min-width: 1320px) {
+@media screen and (min-width: 1321px) {
 
   /* Featured Section*/
   .Featured-Trending-Container {
@@ -877,17 +904,17 @@
   }
 
   .Featured-Main-Info-Container h3 {
-    font-size: 29.04px;
-    line-height: 33px;
+    font-size: 25.08px;
+    line-height: 25.08px;
   }
 
   .Featured-Main-Info-Container h4 {
-    font-size: 15.84px;
+    font-size: 13.86px;
   }
 
   .Featured-Main-Info-Container p {
-    font-size: 19.14px;
-    line-height:  26.4px;
+    font-size: 22.44px;
+    line-height: 23.1px;
   }
 
   .Featured-Sub-Border {
@@ -900,17 +927,17 @@
   }
 
   .Featured-Sub-Article h3 {
-    font-size: 15.18px;
+    font-size: 17.16px;
     line-height: 17.16px;
   }
 
   .Featured-Sub-Article h4 {
-    font-size: 15.84px;
+    font-size: 14.52px;
   }
 
   .Featured-Sub-Sections-Button {
-    height: 15px;
-    width: 15px;
+    height: 13.2px;
+    width: 13.2px;
 
   }
 
@@ -925,50 +952,72 @@
   }
 
   .Trending-Name-Artist {
-    font-size: 17.16px;
-    line-height: 17.16px;
+    font-size: 20.46px;
+    line-height: 19.8px;
   }
 
   .Trending-Name-Title {
-    font-size: 16.5px;
-    line-height: 16.5px;
+    font-size: 17.82px;
+    line-height: 17.16px;
   }
 
   .Trending-Number {
     font-size: 15.18px;
   }
 
-}
-
-/* Styles for Computer */
-@media screen and (min-width: 1500px) {
-
-  /* Latests Section */
-  .LatestSong-Albums-Vidoes-Content-Container {
-    grid-template-columns: 500px 500px 500px;
-    height: 1860px;
-    justify-content: center;
-    gap: 2.5vw;
+  /* Latest */
+  .Latest-Styling{
+    height: 765.594px;
   }
 
-  .Latest-Styling {
-    border-width: 1px;
-    height: 720px;
-  }
-
-  .Latests-Content h2 {
-    font-size: 33px;
-    line-height: 75px;
-  }
-
-  .Latest-Img-Container {
-    border-width: 3px;
-    height: 210px;
+  .Latest-Img-Container{
+    border-width: 2px;
+    height: 211.188px;
   }
 
   .Latest-Info-Button-Sizer {
     border-width: 1px;
-    height: 510px;
+    height: 554.391px;
+  }
+
+  .Latest-Info-Button-Container {
+    padding: 13.2px;
+    border-width: 1px;
+  }
+
+  .Latest-Info h3 {
+    font-size: 27.72px;
+    line-height: 33px;
+  }
+
+  .Latest-Date {
+    font-size: 13.2px;
+  }
+
+  .Latest-Summary {
+    font-size: 21.78px;
+    line-height: 27.72px;
+  }
+
+  .Latest-Button {
+    font-size: 15.84px;
+  }
+
+}
+
+/* Styles for Computer */
+@media screen and (min-width: 1501px) {
+
+  /* Latests Section */
+  .LatestSong-Albums-Vidoes-Content-Container {
+    grid-template-columns: 495px 495px 495px;
+    justify-content: space-evenly;
+    height: 1910px;
+  }
+  
+  .Latests-Content h2 {
+    font-size: 33px;
+    line-height: 75px;
   }
 
   .Latest-Info-Button-Container {
@@ -976,32 +1025,10 @@
     border-width: 1px;
   }
 
-  .Latest-Info h3 {
-    font-size: 27px;
-    line-height: 30px;
-  }
-
-  .Latest-Date {
-    font-size: 15.75px;
-  }
-
-  .Latest-Summary {
-    font-size: 17.25px;
-    line-height: 25.5px;
-  }
-
-  .Latest-Button {
-    padding: 6px 9px;
-    border-width: 1px;
-    font-size: 15.75px;
-  }
-
   .Latests-Content a {
     font-size: 22.5px;
     line-height: 75px;
   }
-
-
 
 
   /* Upcoming Section*/
@@ -1079,4 +1106,11 @@
     font-size: 9px;
   }
 
+}
+
+@media screen and (min-width: 1650px) {
+  .LatestSong-Albums-Vidoes-Content-Container {
+    justify-content: center;
+    gap: 4%
+  }
 }
